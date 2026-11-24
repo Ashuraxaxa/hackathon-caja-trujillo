@@ -1,0 +1,5 @@
+data/raw/
+data/interim/*.parquet
+data/interim/*.geojson
+__pycache__/
+*.part

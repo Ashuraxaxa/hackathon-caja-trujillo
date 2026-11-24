@@ -28,3 +28,20 @@ Las fuentes manuales se descargan desde el navegador y se dejan en `data/raw/sbs
 - `ruc_piloto.parquet`: contribuyentes del ámbito con dirección (insumo para geocodificar).
 - `limites_piloto.geojson`, `poblacion_por_distrito`, `ruc_por_distrito`, `mercados_por_distrito`.
 - `reporte_fase0.md`: chequeos de calidad, hashes de las fuentes y notas.
+
+# Fase 1 — Índice de oportunidad v0 (por distrito)
+
+```bash
+python fase1/indice_v0.py              # alpha=0.6 (más peso a VOLUMEN)
+python fase1/indice_v0.py --alpha 0.3  # más peso a INTENSIDAD (inclusión)
+```
+
+Salidas en `salidas/`: `ranking_v0.csv` (abre en Excel), `reporte_indice_v0.md` (método, top, auditoría de sesgo,
+limitaciones) y `mapa_indice_v0.html` (se abre con doble clic y funciona sin internet, salvo el mapa de fondo).
+
+- **Volumen**: adultos de 18-64 (50 %), puestos de mercado (25 %), empresas formales activas (25 %).
+- **Intensidad**: brecha de formalidad (50 %), puestos de mercado por adulto (50 %).
+- `alpha` decide cuánto pesa cada lente; es una decisión de negocio que hay que validar con el owner.
+- Cuando estén los datos SBS, se deja `data/interim/oferta_por_distrito.parquet` (`ubigeo`, `puntos_atencion`)
+  y el índice penaliza hasta un 30 % a los distritos que ya tienen muchos puntos de atención.
+- La estabilidad se mide con 1 000 simulaciones que mueven los pesos y alpha.

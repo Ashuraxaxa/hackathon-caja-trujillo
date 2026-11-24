@@ -24,8 +24,8 @@ la lista combinada intercala ambos rankings según --cupo-agro (fracción de la 
 
 alpha es una decisión de negocio (eficiencia comercial vs. inclusión), no técnica:
 se discute con el owner. factor_oferta penaliza distritos ya saturados de puntos de
-atención financiera cuando existan datos SBS en data/interim/oferta_por_distrito.parquet
-(columnas: ubigeo, puntos_atencion). Sin ellos, factor_oferta = 1 y se avisa.
+atención financiera, leídos de data/interim/oferta_por_distrito.parquet o de la plantilla
+manual data/manual/oferta_distrital.csv (≥ 80 % llena). Sin ellos, factor_oferta = 1 y se avisa.
 
 Salidas en salidas/: ranking_{VERSION}.csv, reporte_indice_{VERSION}.md, mapa_indice_{VERSION}.html
 """

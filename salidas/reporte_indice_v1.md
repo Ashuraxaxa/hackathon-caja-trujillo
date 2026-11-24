@@ -51,6 +51,30 @@ La lista combinada intercala el ranking de cada segmento: 40% de los puestos par
 | 14 | SALPO | OTUZCO | agro | 87.0 | 79% | [agro] + productores agro excluidos por adulto (p99); productores agro sin acceso a crédito (p88) | − % de productores excluidos del crédito (p65) |
 | 15 | HUANCHACO | TRUJILLO | urbano | 73.2 | 54% | [urbano] + adultos 18-64 (p96); empresas formales activas (p96) | − brecha de formalidad (pocas empresas por adulto) (p5) |
 
+## Espacios en blanco: prioridades sin agencia de Caja Trujillo
+
+De los 15 primeros, **6** no tienen agencia propia (fuente: web de Caja Trujillo). Son candidatos a otro canal (asesores itinerantes, agentes, agencia móvil) o a apertura; en los que sí tienen agencia, la acción es prospección desde la agencia existente.
+
+`agencia más cercana`: distrito con agencia propia más cercano en línea recta (en sierra, por carretera puede ser 2-3 veces más).
+
+| # | distrito | segmento | agencias CT | agencia más cercana | km (recta) | adultos 18-64 | productores excluidos |
+|---:|---|---|---:|---|---:|---:|---:|
+| 1 | TRUJILLO | urbano | 9 | — | — | 244,978 | 28 |
+| 2 | JULCAN | agro | 0 | OTUZCO | 28 | 8,596 | 2,868 |
+| 3 | EL PORVENIR | urbano | 1 | — | — | 101,260 | 16 |
+| 4 | CHUGAY | agro | 0 | HUAMACHUCO | 28 | 12,925 | 3,609 |
+| 5 | LA ESPERANZA | urbano | 2 | — | — | 124,230 | 0 |
+| 6 | VIRU | urbano | 1 | — | — | 43,123 | 856 |
+| 7 | USQUIL | agro | 0 | OTUZCO | 24 | 17,035 | 4,490 |
+| 8 | LAREDO | urbano | 1 | — | — | 28,282 | 614 |
+| 9 | OTUZCO | agro | 1 | — | — | 19,554 | 4,730 |
+| 10 | FLORENCIA DE MORA | urbano | 0 | LA ESPERANZA | 2 | 44,827 | 0 |
+| 11 | CHEPEN | urbano | 1 | — | — | 36,074 | 585 |
+| 12 | SARTIMBAMBA | agro | 0 | HUAMACHUCO | 38 | 9,785 | 2,429 |
+| 13 | PACASMAYO | urbano | 1 | — | — | 21,126 | 22 |
+| 14 | SALPO | agro | 0 | OTUZCO | 21 | 3,790 | 1,784 |
+| 15 | HUANCHACO | urbano | 1 | — | — | 53,278 | 147 |
+
 ## Auditoría de sesgo urbano/rural
 
 | tercil de densidad | distritos | volumen | intensidad | final | en top-15 |

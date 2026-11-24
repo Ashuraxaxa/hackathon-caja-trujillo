@@ -92,6 +92,12 @@ def cargar() -> tuple[pd.DataFrame, dict]:
     for ub, (dist, prov) in NOMBRES_FALTANTES.items():
         df.loc[df["ubigeo"] == ub, ["distrito", "provincia"]] = [dist, prov]
     df["ruc_activos_habidos"] = df["ruc_activos_habidos"].fillna(0)
+    ag = ROOT / "data" / "manual" / "agencias_caja_trujillo.csv"
+    if ag.exists():
+        cnt = pd.read_csv(ag, dtype={"ubigeo": str}).groupby("ubigeo").size()
+        df["agencias_ct"] = df["ubigeo"].map(cnt).fillna(0).astype(int)
+    else:
+        df["agencias_ct"] = pd.NA
     df["densidad_hab_km2"] = df["pob"] / df["area_km2"]
     df["puestos_x1000"] = 1000 * df["puestos_mercado"] / df["pob_18_64"]
     df["empresas_x1000"] = 1000 * df["ruc_activos_habidos"] / df["pob_18_64"]
@@ -116,13 +122,44 @@ def cargar_oferta() -> pd.DataFrame | None:
     m = pd.read_csv(MANUAL_OFERTA, dtype={"ubigeo": str}, encoding="utf-8-sig")
     ofi = [c for c in m.columns if c.startswith("oficinas_")]
     nums = m[ofi + ["agentes_corresponsales"]].apply(pd.to_numeric, errors="coerce")
-    llenos = nums[ofi].notna().any(axis=1)
+    competencia = [c for c in ofi if c != "oficinas_caja_trujillo"]
+    llenos = nums[competencia].notna().any(axis=1)  # la presencia propia no cuenta como "mercado relevado"
     if llenos.mean() < 0.8:  # con la plantilla a medio llenar, penalizar sería injusto con los distritos vacíos
         if llenos.any():
             print(f"Aviso: plantilla de oferta llena en {llenos.sum()}/{len(m)} distritos; se usa cuando llegue al 80 %.")
         return None
     m["puntos_atencion"] = nums[ofi].fillna(0).sum(axis=1) + nums["agentes_corresponsales"].fillna(0) / 3
     return m[["ubigeo", "puntos_atencion"]]
+
+
+def centroides(geo: dict) -> pd.DataFrame:
+    """Centroide aproximado (promedio de vértices del anillo exterior más grande) sin dependencias GIS."""
+    filas = []
+    for f in geo["features"]:
+        g = f["geometry"]
+        polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
+        ring = max((p[0] for p in polys), key=len)
+        lon, lat = np.mean(np.array(ring)[:, :2], axis=0)
+        filas.append({"ubigeo": f["properties"]["IDDIST"], "lon": lon, "lat": lat})
+    return pd.DataFrame(filas)
+
+
+def agencia_cercana(df: pd.DataFrame, geo: dict) -> pd.DataFrame:
+    """Para cada distrito: distrito con agencia CT más cercano (línea recta entre centroides, km).
+    Es una aproximación para decidir si se atiende con asesores desde una agencia existente;
+    la distancia por carretera en sierra puede ser 2-3 veces mayor."""
+    c = centroides(geo).merge(df[["ubigeo", "distrito", "agencias_ct"]], on="ubigeo")
+    con = c[c["agencias_ct"] > 0]
+    if con.empty:
+        return df.assign(agencia_cercana=pd.NA, km_agencia=np.nan)
+    lat1, lon1 = np.radians(c[["lat"]].to_numpy()), np.radians(c[["lon"]].to_numpy())
+    lat2, lon2 = np.radians(con["lat"].to_numpy()), np.radians(con["lon"].to_numpy())
+    h = np.sin((lat2 - lat1) / 2) ** 2 + np.cos(lat1) * np.cos(lat2) * np.sin((lon2 - lon1) / 2) ** 2
+    km = 2 * 6371 * np.arcsin(np.sqrt(h))
+    idx = km.argmin(axis=1)
+    c["agencia_cercana"] = np.where(c["agencias_ct"] > 0, c["distrito"], con["distrito"].to_numpy()[idx])
+    c["km_agencia"] = np.where(c["agencias_ct"] > 0, 0, km.min(axis=1)).round(0)
+    return df.merge(c[["ubigeo", "agencia_cercana", "km_agencia"]], on="ubigeo", how="left")
 
 
 def oferta(df: pd.DataFrame) -> tuple[pd.DataFrame, bool]:
@@ -228,7 +265,7 @@ def leaflet() -> str:
 def mapa(df: pd.DataFrame, geo: dict, alpha: float, cupo_agro: float, con_oferta: bool) -> None:
     cols = ["ubigeo", "distrito", "provincia", "segmento", "puesto", "score", "score_volumen", "score_intensidad",
             "pob_18_64", "ruc_activos_habidos", "empresas_x1000", "puestos_mercado", "productores", "prod_excluidos",
-            "razones", "pct_en_top"]
+            "razones", "pct_en_top", "agencias_ct", "agencia_cercana", "km_agencia"]
     props = df[cols].round(2).set_index("ubigeo").to_dict(orient="index")
     feats = []
     for f in geo["features"]:
@@ -250,6 +287,8 @@ def main() -> int:
 
     df, geo = cargar()
     df, con_oferta = oferta(df)
+    if df["agencias_ct"].notna().all():
+        df = agencia_cercana(df, geo)
     for k, (col, _) in COMPONENTES.items():
         df[k] = pct(df[col])
     df["score_volumen"] = puntuar(df, 1.0)[0] / df["factor_oferta"]
@@ -264,7 +303,7 @@ def main() -> int:
     salida = ["puesto", "ubigeo", "distrito", "provincia", "segmento", "puesto_segmento", "score", "score_volumen", "score_intensidad",
               "factor_oferta", "pct_en_top", "puesto_p25", "puesto_p75", "pob_18_64", "mujeres_18_64",
               "ruc_activos_habidos", "empresas_x1000", "mercados", "puestos_mercado", "productores", "prod_excluidos",
-              "tasa_exclusion_agro", "prod_credito_cmac", "densidad_hab_km2", "razones"]
+              "tasa_exclusion_agro", "prod_credito_cmac", "densidad_hab_km2", "agencias_ct", "agencia_cercana", "km_agencia", "razones"]
     df[salida].round(3).to_csv(OUT / f"ranking_{VERSION}.csv", index=False, encoding="utf-8-sig")  # sig: abre bien en Excel
     reporte(df, args.alpha, args.cupo_agro, args.top, con_oferta)
     mapa(df, geo, args.alpha, args.cupo_agro, con_oferta)
@@ -298,6 +337,18 @@ def reporte(df: pd.DataFrame, alpha: float, cupo_agro: float, top: int, con_ofer
           "| # | distrito | provincia | segmento | score | estabilidad | por qué |", "|---:|---|---|---|---:|---:|---|"]
     L += [f"| {r.puesto} | {r.distrito} | {r.provincia} | {r.segmento} | {r.score:.1f} | {r.pct_en_top:.0%} | {r.razones} |"
           for r in df.head(top).itertuples()]
+    if df["agencias_ct"].notna().all():
+        L += ["", "## Espacios en blanco: prioridades sin agencia de Caja Trujillo", "",
+              f"De los {top} primeros, **{int((df.head(top)['agencias_ct'] == 0).sum())}** no tienen agencia propia "
+              "(fuente: web de Caja Trujillo). Son candidatos a otro canal (asesores itinerantes, agentes, agencia móvil) "
+              "o a apertura; en los que sí tienen agencia, la acción es prospección desde la agencia existente.", "",
+              "`agencia más cercana`: distrito con agencia propia más cercano en línea recta (en sierra, por carretera puede ser 2-3 veces más).", "",
+              "| # | distrito | segmento | agencias CT | agencia más cercana | km (recta) | adultos 18-64 | productores excluidos |",
+              "|---:|---|---|---:|---|---:|---:|---:|"]
+        L += [f"| {r.puesto} | {r.distrito} | {r.segmento} | {r.agencias_ct} | "
+              f"{'—' if r.agencias_ct else r.agencia_cercana} | {'—' if r.agencias_ct else f'{r.km_agencia:.0f}'} | "
+              f"{r.pob_18_64:,.0f} | {r.prod_excluidos:,.0f} |"
+              for r in df.head(top).itertuples()]
     L += ["", "## Auditoría de sesgo urbano/rural", ""] + auditoria(df, top)
     L += ["", "## Limitaciones (decirlas en el pitch)", "",
           "- El padrón RUC reducido solo trae ubigeo para personas jurídicas (RUC 20); las personas naturales "
@@ -325,7 +376,7 @@ __LEAFLET__
   .tabs button.on{background:#2f6fde;color:#fff;border-color:#2f6fde}
   ol{padding-left:22px;margin:0}li{padding:6px 0;border-bottom:1px solid var(--line);cursor:pointer}
   li b{font-weight:600}.seg{font-size:11px;padding:1px 6px;border-radius:8px;background:var(--card);border:1px solid var(--line)}
-  .seg.agro{border-color:#3d9a50;color:#3d9a50}.seg.urbano{border-color:#2f6fde;color:#2f6fde}.why{color:var(--muted);font-size:12px}
+  .seg.agro{border-color:#3d9a50;color:#3d9a50}.seg.sin{border-color:#c2410c;color:#c2410c}.seg.urbano{border-color:#2f6fde;color:#2f6fde}.why{color:var(--muted);font-size:12px}
   .legend{background:var(--bg);color:var(--fg);padding:8px 10px;border-radius:6px;font-size:12px;box-shadow:0 1px 4px #0003}
   .legend i{display:inline-block;width:14px;height:10px;margin-right:4px}
   @media (max-width:800px){.wrap{grid-template-columns:1fr;grid-template-rows:55vh auto;height:auto}aside{border-left:0}}
@@ -346,7 +397,7 @@ let br = breaks();
 const col = x => colors[br.filter(b=>x>=b).length];
 const fmt = n => Math.round(n).toLocaleString("es-PE");
 const layer = L.geoJSON(data,{style:f=>({fillColor:col(f.properties[key]),weight:.6,color:"#555",fillOpacity:.8}),
-  onEachFeature:(f,l)=>{const p=f.properties;l.bindPopup(`<b>${p.distrito}</b> (${p.provincia})<br>Segmento: ${p.segmento} · puesto #${p.puesto} · score ${p.score.toFixed(1)}<br>Volumen ${p.score_volumen.toFixed(1)} · Intensidad ${p.score_intensidad.toFixed(1)}<br>Adultos 18-64: ${fmt(p.pob_18_64)}<br>Empresas activas: ${fmt(p.ruc_activos_habidos)} (${p.empresas_x1000.toFixed(1)}/1000)<br>Puestos de mercado: ${fmt(p.puestos_mercado)}<br>Productores agro: ${fmt(p.productores)} (${fmt(p.prod_excluidos)} sin acceso a crédito)<br>Estabilidad en top: ${Math.round(p.pct_en_top*100)}%<br><i>${p.razones}</i>`);}}).addTo(map);
+  onEachFeature:(f,l)=>{const p=f.properties;l.bindPopup(`<b>${p.distrito}</b> (${p.provincia})<br>Segmento: ${p.segmento} · puesto #${p.puesto} · score ${p.score.toFixed(1)}<br>Volumen ${p.score_volumen.toFixed(1)} · Intensidad ${p.score_intensidad.toFixed(1)}<br>Adultos 18-64: ${fmt(p.pob_18_64)}<br>Empresas activas: ${fmt(p.ruc_activos_habidos)} (${p.empresas_x1000.toFixed(1)}/1000)<br>Puestos de mercado: ${fmt(p.puestos_mercado)}<br>Productores agro: ${fmt(p.productores)} (${fmt(p.prod_excluidos)} sin acceso a crédito)<br>Agencias Caja Trujillo: <b>${p.agencias_ct ?? "s/d"}</b>${p.agencias_ct===0?` (la más cercana: ${p.agencia_cercana}, ~${p.km_agencia} km en recta)`:""}<br>Estabilidad en top: ${Math.round(p.pct_en_top*100)}%<br><i>${p.razones}</i>`);}}).addTo(map);
 map.fitBounds(layer.getBounds());
 const legend = L.control({position:"bottomleft"});
 legend.onAdd = () => { const d=L.DomUtil.create("div","legend"); d.id="lg"; return d; };
@@ -358,7 +409,7 @@ function render(){
   // "Final" sigue el orden combinado (con cupo por segmento); las otras pestañas, el puntaje del lente.
   const ord = key==="score" ? (a,b)=>a.properties.puesto-b.properties.puesto : (a,b)=>b.properties[key]-a.properties[key];
   const top = [...data.features].sort(ord).slice(0,20);
-  document.getElementById("list").innerHTML = top.map(f=>`<li data-u="${f.properties.ubigeo}"><b>${f.properties.distrito}</b> · <span class="seg ${f.properties.segmento}">${f.properties.segmento}</span> · ${f.properties[key].toFixed(1)}<div class="why">${f.properties.provincia} · ${f.properties.razones}</div></li>`).join("");
+  document.getElementById("list").innerHTML = top.map(f=>`<li data-u="${f.properties.ubigeo}"><b>${f.properties.distrito}</b> · <span class="seg ${f.properties.segmento}">${f.properties.segmento}</span>${f.properties.agencias_ct===0?' <span class="seg sin">sin agencia CT</span>':''} · ${f.properties[key].toFixed(1)}<div class="why">${f.properties.provincia} · ${f.properties.razones}</div></li>`).join("");
 }
 document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");key=b.dataset.k;render();});
 document.getElementById("list").onclick = e => { const li=e.target.closest("li"); if(!li) return;

@@ -53,6 +53,9 @@ limitaciones) y `mapa_indice_v1.html` (se abre con doble clic y funciona sin int
   como contexto competitivo). El detalle por distrito se llena a mano en `data/manual/oferta_distrital.csv` usando los
   buscadores de agencias de cada entidad (celda vacía = sin dato; 0 = verificado que no hay). Cuando la plantilla
   tiene al menos el 80 % de los distritos llenos, el índice penaliza hasta un 30 % a los distritos más atendidos.
+- **Presencia de Caja Trujillo**: `data/manual/agencias_caja_trujillo.csv` (24 agencias de La Libertad tomadas de la web
+  de la Caja, con distrito asignado por dirección; las marcadas "verificar" conviene confirmarlas). El reporte lista
+  los **espacios en blanco** (distritos prioritarios sin agencia propia) y la agencia más cercana en línea recta.
 - La estabilidad se mide con 1 000 simulaciones que mueven los pesos y alpha. La auditoría compara los resultados
   por tercil de densidad.
 

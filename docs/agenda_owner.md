@@ -13,6 +13,10 @@
 - Dato de apertura (CENAGRO, La Libertad): de **130 mil productores agro, solo el 5,4 % obtuvo crédito** y el **55 %
   quedó excluido** (no lo pidió por intereses, falta de garantía, trámites o por creer que no se lo darían; o se lo
   negaron). **Un tercio de los créditos que sí se otorgaron vino de cajas municipales**: el canal ya existe, falta escala.
+- **6 de las 15 zonas prioritarias no tienen agencia de Caja Trujillo**: 5 agro en la sierra (Julcán, Usquil y Salpo,
+  a 20-30 km de la agencia de Otuzco; Chugay y Sartimbamba, a 28-38 km de la de Huamachuco) y Florencia de Mora
+  (45 mil adultos, pegada a La Esperanza). Pregunta clave: ¿esas zonas se cubren con asesores itinerantes desde la
+  agencia más cercana, con agentes o con agencia móvil?
 - Explicar los dos segmentos (urbano y agro) y mostrar en vivo cómo cambia la lista al mover α y el cupo agro.
 - Dejar claro lo que **no** es: no califica personas, no es scoring de crédito, no usa datos personales.
 
@@ -69,7 +73,7 @@ Preguntar sobre 3 distritos concretos del top:
 
 ## 4. Pedidos y cierre (2 min)
 
-- [ ] ¿Pueden compartirnos la **lista de agencias y oficinas** de la Caja con dirección? (Es pública en su web, pero confirmar que esté vigente).
+- [ ] Confirmar el distrito de las 5 agencias marcadas "verificar" en `data/manual/agencias_caja_trujillo.csv` (las tomamos de la web).
 - [ ] ¿Tienen a la mano los datos SBS de puntos de atención por distrito, o los bajamos nosotros?
 - [ ] Nombre de un **jefe de agencia** que podamos entrevistar 15 minutos para validar la vista móvil.
 - [ ] Canal de contacto para dudas durante el hackathón.

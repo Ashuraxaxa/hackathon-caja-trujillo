@@ -49,10 +49,12 @@ limitaciones) y `mapa_indice_v1.html` (se abre con doble clic y funciona sin int
   habitante). `alpha` es el peso del volumen.
 - Comparar un distrito urbano con uno agro es una decisión de cartera, no algo que decidan los datos. Por eso la lista
   final intercala los rankings de ambos segmentos según `--cupo-agro`.
-- **Oferta financiera por distrito**: la SBS solo publica oficinas por departamento (`python fase0/sbs.py` las resume
-  como contexto competitivo). El detalle por distrito se llena a mano en `data/manual/oferta_distrital.csv` usando los
-  buscadores de agencias de cada entidad (celda vacía = sin dato; 0 = verificado que no hay). Cuando la plantilla
-  tiene al menos el 80 % de los distritos llenos, el índice penaliza hasta un 30 % a los distritos más atendidos.
+- **Competencia por distrito**: `python fase0/competencia.py` lee las redes de agencias publicadas por Mibanco,
+  Efectiva, Caja Arequipa, Caja Del Santa y Caja Paita (37 de las 121 oficinas de la competencia en La Libertad; las
+  cifras por entidad cuadran con la SBS) y escribe `data/manual/oficinas_competencia.csv`. Filas agregadas a mano con
+  `fuente = manual` (p. ej. Compartamos, Caja Huancayo) se conservan. El índice penaliza hasta un 30 % a los distritos
+  con más oficinas de la competencia por adulto; sin competencia, no hay penalidad. `python fase0/sbs.py` resume las
+  oficinas por entidad a nivel departamento (contexto competitivo).
 - **Presencia de Caja Trujillo**: `data/manual/agencias_caja_trujillo.csv` (24 agencias de La Libertad tomadas de la web
   de la Caja, con distrito asignado por dirección; las marcadas "verificar" conviene confirmarlas). El reporte lista
   los **espacios en blanco** (distritos prioritarios sin agencia propia) y la agencia más cercana en línea recta.

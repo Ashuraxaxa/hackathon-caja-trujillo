@@ -24,8 +24,8 @@ la lista combinada intercala ambos rankings según --cupo-agro (fracción de la 
 
 alpha es una decisión de negocio (eficiencia comercial vs. inclusión), no técnica:
 se discute con el owner. factor_oferta penaliza distritos ya saturados de puntos de
-atención financiera, leídos de data/interim/oferta_por_distrito.parquet o de la plantilla
-manual data/manual/oferta_distrital.csv (≥ 80 % llena). Sin ellos, factor_oferta = 1 y se avisa.
+atención de la competencia, leídos de data/manual/oficinas_competencia.csv (fase0/competencia.py).
+Sin competencia en el distrito, factor_oferta = 1.
 
 Salidas en salidas/: ranking_{VERSION}.csv, reporte_indice_{VERSION}.md, mapa_indice_{VERSION}.html
 """
@@ -108,28 +108,25 @@ def cargar() -> tuple[pd.DataFrame, dict]:
     return df, geo
 
 
-MANUAL_OFERTA = ROOT / "data" / "manual" / "oferta_distrital.csv"
+COMPETENCIA = ROOT / "data" / "manual" / "oficinas_competencia.csv"
 
 
 def cargar_oferta() -> pd.DataFrame | None:
-    """Oferta financiera por distrito: parquet procesado o, si no, la plantilla manual llenada por el equipo.
-    En la plantilla, una celda vacía = sin dato; 0 = se verificó que no hay. Los agentes pesan 1/3 de una oficina."""
+    """Oficinas de la competencia por distrito (fase0/competencia.py + filas manuales).
+    Caja Trujillo no cuenta: su presencia se muestra aparte (agencias_ct)."""
     path = INTERIM / "oferta_por_distrito.parquet"
     if path.exists():
         return pd.read_parquet(path)[["ubigeo", "puntos_atencion"]]
-    if not MANUAL_OFERTA.exists():
+    if not COMPETENCIA.exists():
         return None
-    m = pd.read_csv(MANUAL_OFERTA, dtype={"ubigeo": str}, encoding="utf-8-sig")
-    ofi = [c for c in m.columns if c.startswith("oficinas_")]
-    nums = m[ofi + ["agentes_corresponsales"]].apply(pd.to_numeric, errors="coerce")
-    competencia = [c for c in ofi if c != "oficinas_caja_trujillo"]
-    llenos = nums[competencia].notna().any(axis=1)  # la presencia propia no cuenta como "mercado relevado"
-    if llenos.mean() < 0.8:  # con la plantilla a medio llenar, penalizar sería injusto con los distritos vacíos
-        if llenos.any():
-            print(f"Aviso: plantilla de oferta llena en {llenos.sum()}/{len(m)} distritos; se usa cuando llegue al 80 %.")
-        return None
-    m["puntos_atencion"] = nums[ofi].fillna(0).sum(axis=1) + nums["agentes_corresponsales"].fillna(0) / 3
-    return m[["ubigeo", "puntos_atencion"]]
+    c = pd.read_csv(COMPETENCIA, dtype={"ubigeo": str}, encoding="utf-8-sig").dropna(subset=["ubigeo"])
+    return c.groupby("ubigeo").size().rename("puntos_atencion").reset_index()
+
+
+def entidades_relevadas() -> list[str]:
+    if not COMPETENCIA.exists():
+        return []
+    return sorted(pd.read_csv(COMPETENCIA, encoding="utf-8-sig")["entidad"].dropna().unique())
 
 
 def centroides(geo: dict) -> pd.DataFrame:
@@ -162,14 +159,18 @@ def agencia_cercana(df: pd.DataFrame, geo: dict) -> pd.DataFrame:
     return df.merge(c[["ubigeo", "agencia_cercana", "km_agencia"]], on="ubigeo", how="left")
 
 
-def oferta(df: pd.DataFrame) -> tuple[pd.DataFrame, bool]:
+def oferta(df: pd.DataFrame, penalidad: float = PENALIDAD_OFERTA_MAX) -> tuple[pd.DataFrame, bool]:
     of = cargar_oferta()
     if of is None:
         df["factor_oferta"] = 1.0
         return df, False
     df = df.merge(of, on="ubigeo", how="left")
-    df["puntos_x1000"] = 1000 * df["puntos_atencion"].fillna(0) / df["pob_18_64"]
-    df["factor_oferta"] = 1 - PENALIDAD_OFERTA_MAX * pct(df["puntos_x1000"])
+    df["oficinas_competencia"] = df["puntos_atencion"].fillna(0).astype(int)
+    df["puntos_x1000"] = 1000 * df["oficinas_competencia"] / df["pob_18_64"]
+    # sin competencia = sin penalidad; entre los que tienen, más oficinas por adulto = más penalidad
+    con = df["puntos_x1000"] > 0
+    df["factor_oferta"] = 1.0
+    df.loc[con, "factor_oferta"] = 1 - penalidad * pct(df.loc[con, "puntos_x1000"])
     return df, True
 
 
@@ -265,7 +266,7 @@ def leaflet() -> str:
 def mapa(df: pd.DataFrame, geo: dict, alpha: float, cupo_agro: float, con_oferta: bool) -> None:
     cols = ["ubigeo", "distrito", "provincia", "segmento", "puesto", "score", "score_volumen", "score_intensidad",
             "pob_18_64", "ruc_activos_habidos", "empresas_x1000", "puestos_mercado", "productores", "prod_excluidos",
-            "razones", "pct_en_top", "agencias_ct", "agencia_cercana", "km_agencia"]
+            "razones", "pct_en_top", "oficinas_competencia", "agencias_ct", "agencia_cercana", "km_agencia"]
     props = df[cols].round(2).set_index("ubigeo").to_dict(orient="index")
     feats = []
     for f in geo["features"]:
@@ -274,7 +275,7 @@ def mapa(df: pd.DataFrame, geo: dict, alpha: float, cupo_agro: float, con_oferta
             feats.append({"type": "Feature", "geometry": f["geometry"], "properties": {"ubigeo": f["properties"]["IDDIST"], **p}})
     data = json.dumps({"type": "FeatureCollection", "features": feats}, ensure_ascii=False)
     html = MAPA_HTML.replace("__LEAFLET__", leaflet()).replace("__DATA__", data).replace("__ALPHA__", f"{alpha:.2f} · cupo agro {cupo_agro:.0%}").replace("__VERSION__", VERSION).replace(
-        "__OFERTA__", "incluida" if con_oferta else "pendiente (sin datos por distrito)")
+        "__OFERTA__", "competencia relevada: " + ", ".join(entidades_relevadas()) if con_oferta else "pendiente")
     (OUT / f"mapa_indice_{VERSION}.html").write_text(html, encoding="utf-8")
 
 
@@ -282,11 +283,13 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--alpha", type=float, default=0.6, help="peso del lente VOLUMEN dentro de cada segmento (0-1)")
     ap.add_argument("--cupo-agro", type=float, default=0.4, help="fracción de la lista combinada para el segmento agro")
+    ap.add_argument("--penalidad-competencia", type=float, default=PENALIDAD_OFERTA_MAX,
+                    help="máximo descuento por oficinas de la competencia (0 = la competencia no resta)")
     ap.add_argument("--top", type=int, default=15)
     args = ap.parse_args()
 
     df, geo = cargar()
-    df, con_oferta = oferta(df)
+    df, con_oferta = oferta(df, args.penalidad_competencia)
     if df["agencias_ct"].notna().all():
         df = agencia_cercana(df, geo)
     for k, (col, _) in COMPONENTES.items():
@@ -303,12 +306,12 @@ def main() -> int:
     salida = ["puesto", "ubigeo", "distrito", "provincia", "segmento", "puesto_segmento", "score", "score_volumen", "score_intensidad",
               "factor_oferta", "pct_en_top", "puesto_p25", "puesto_p75", "pob_18_64", "mujeres_18_64",
               "ruc_activos_habidos", "empresas_x1000", "mercados", "puestos_mercado", "productores", "prod_excluidos",
-              "tasa_exclusion_agro", "prod_credito_cmac", "densidad_hab_km2", "agencias_ct", "agencia_cercana", "km_agencia", "razones"]
+              "tasa_exclusion_agro", "prod_credito_cmac", "densidad_hab_km2", "agencias_ct", "oficinas_competencia", "agencia_cercana", "km_agencia", "razones"]
     df[salida].round(3).to_csv(OUT / f"ranking_{VERSION}.csv", index=False, encoding="utf-8-sig")  # sig: abre bien en Excel
     reporte(df, args.alpha, args.cupo_agro, args.top, con_oferta)
     mapa(df, geo, args.alpha, args.cupo_agro, con_oferta)
 
-    print(f"alpha={args.alpha}  cupo agro={args.cupo_agro:.0%}  oferta distrital: {'sí' if con_oferta else 'NO (pendiente: data/manual/oferta_distrital.csv)'}\n")
+    print(f"alpha={args.alpha}  cupo agro={args.cupo_agro:.0%}  penalidad competencia={args.penalidad_competencia:.0%}  competencia: {', '.join(entidades_relevadas()) if con_oferta else 'NO (correr fase0/competencia.py)'}\n")
     print(df[["puesto", "distrito", "provincia", "segmento", "score", "pct_en_top"]].head(args.top).to_string(index=False))
     print(f"\n-> salidas/ranking_{VERSION}.csv, salidas/reporte_indice_{VERSION}.md, salidas/mapa_indice_{VERSION}.html")
     return 0
@@ -316,7 +319,7 @@ def main() -> int:
 
 def reporte(df: pd.DataFrame, alpha: float, cupo_agro: float, top: int, con_oferta: bool) -> None:
     L = [f"# Índice de oportunidad {VERSION} — La Libertad", "",
-         f"alpha (peso de VOLUMEN) = **{alpha}** · cupo agro = **{cupo_agro:.0%}** · oferta financiera por distrito: **{'incluida' if con_oferta else 'pendiente'}** · "
+         f"alpha (peso de VOLUMEN) = **{alpha}** · cupo agro = **{cupo_agro:.0%}** · competencia relevada: **{', '.join(entidades_relevadas()) if con_oferta else 'pendiente'}** · "
          f"{len(df)} distritos", "",
          "## Cómo se calcula", "",
          "Cada variable se convierte a percentil dentro de La Libertad (0 a 1) y se pondera:", "",
@@ -354,7 +357,7 @@ def reporte(df: pd.DataFrame, alpha: float, cupo_agro: float, top: int, con_ofer
           "- El padrón RUC reducido solo trae ubigeo para personas jurídicas (RUC 20); las personas naturales "
           "con negocio (RUC 10) casi nunca lo tienen. `ruc_activos_habidos` mide **empresas formales**, no microempresarios.",
           "- CENAMA es de 2016 y CENAGRO de 2012: la estructura es estable, pero los montos pueden haber cambiado.",
-          "- Sin oferta por distrito (la SBS solo publica oficinas por departamento) el índice no sabe dónde ya hay agencias/agentes: puede priorizar zonas ya atendidas.",
+          "- La competencia por distrito cubre solo las entidades que publican su red (Mibanco, Efectiva, cajas Arequipa, Del Santa y Paita: ~31 % de las oficinas de la competencia). Falta Compartamos, cajas Huancayo, Piura y Cusco, y la banca tradicional (concentrada en Trujillo metropolitano). No incluye agentes corresponsales.",
           "- Es un índice de priorización territorial, no evalúa a personas ni su riesgo crediticio.",
           "- Alto Trujillo (130112) no tiene polígono en el mapa base: aparece en el ranking pero no en el mapa."]
     (OUT / f"reporte_indice_{VERSION}.md").write_text("\n".join(L) + "\n", encoding="utf-8")
@@ -383,7 +386,7 @@ __LEAFLET__
 </style></head><body>
 <div class="wrap"><div id="map"></div><aside>
 <h1>Índice de oportunidad __VERSION__ · La Libertad</h1>
-<div class="sub">α = __ALPHA__ · oferta: __OFERTA__ · datos públicos (SUNAT, RENIEC, CENAMA, CENAGRO)</div>
+<div class="sub">α = __ALPHA__ · __OFERTA__ · datos públicos (SUNAT, RENIEC, CENAMA, CENAGRO)</div>
 <div class="tabs"><button data-k="score" class="on">Final</button><button data-k="score_volumen">Volumen</button><button data-k="score_intensidad">Intensidad</button></div>
 <ol id="list"></ol></aside></div>
 <script>
@@ -397,7 +400,7 @@ let br = breaks();
 const col = x => colors[br.filter(b=>x>=b).length];
 const fmt = n => Math.round(n).toLocaleString("es-PE");
 const layer = L.geoJSON(data,{style:f=>({fillColor:col(f.properties[key]),weight:.6,color:"#555",fillOpacity:.8}),
-  onEachFeature:(f,l)=>{const p=f.properties;l.bindPopup(`<b>${p.distrito}</b> (${p.provincia})<br>Segmento: ${p.segmento} · puesto #${p.puesto} · score ${p.score.toFixed(1)}<br>Volumen ${p.score_volumen.toFixed(1)} · Intensidad ${p.score_intensidad.toFixed(1)}<br>Adultos 18-64: ${fmt(p.pob_18_64)}<br>Empresas activas: ${fmt(p.ruc_activos_habidos)} (${p.empresas_x1000.toFixed(1)}/1000)<br>Puestos de mercado: ${fmt(p.puestos_mercado)}<br>Productores agro: ${fmt(p.productores)} (${fmt(p.prod_excluidos)} sin acceso a crédito)<br>Agencias Caja Trujillo: <b>${p.agencias_ct ?? "s/d"}</b>${p.agencias_ct===0?` (la más cercana: ${p.agencia_cercana}, ~${p.km_agencia} km en recta)`:""}<br>Estabilidad en top: ${Math.round(p.pct_en_top*100)}%<br><i>${p.razones}</i>`);}}).addTo(map);
+  onEachFeature:(f,l)=>{const p=f.properties;l.bindPopup(`<b>${p.distrito}</b> (${p.provincia})<br>Segmento: ${p.segmento} · puesto #${p.puesto} · score ${p.score.toFixed(1)}<br>Volumen ${p.score_volumen.toFixed(1)} · Intensidad ${p.score_intensidad.toFixed(1)}<br>Adultos 18-64: ${fmt(p.pob_18_64)}<br>Empresas activas: ${fmt(p.ruc_activos_habidos)} (${p.empresas_x1000.toFixed(1)}/1000)<br>Puestos de mercado: ${fmt(p.puestos_mercado)}<br>Productores agro: ${fmt(p.productores)} (${fmt(p.prod_excluidos)} sin acceso a crédito)<br>Oficinas competencia relevada: ${p.oficinas_competencia ?? "s/d"}<br>Agencias Caja Trujillo: <b>${p.agencias_ct ?? "s/d"}</b>${p.agencias_ct===0?` (la más cercana: ${p.agencia_cercana}, ~${p.km_agencia} km en recta)`:""}<br>Estabilidad en top: ${Math.round(p.pct_en_top*100)}%<br><i>${p.razones}</i>`);}}).addTo(map);
 map.fitBounds(layer.getBounds());
 const legend = L.control({position:"bottomleft"});
 legend.onAdd = () => { const d=L.DomUtil.create("div","legend"); d.id="lg"; return d; };

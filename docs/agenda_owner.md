@@ -13,10 +13,14 @@
 - Dato de apertura (CENAGRO, La Libertad): de **130 mil productores agro, solo el 5,4 % obtuvo crédito** y el **55 %
   quedó excluido** (no lo pidió por intereses, falta de garantía, trámites o por creer que no se lo darían; o se lo
   negaron). **Un tercio de los créditos que sí se otorgaron vino de cajas municipales**: el canal ya existe, falta escala.
-- **6 de las 15 zonas prioritarias no tienen agencia de Caja Trujillo**: 5 agro en la sierra (Julcán, Usquil y Salpo,
-  a 20-30 km de la agencia de Otuzco; Chugay y Sartimbamba, a 28-38 km de la de Huamachuco) y Florencia de Mora
-  (45 mil adultos, pegada a La Esperanza). Pregunta clave: ¿esas zonas se cubren con asesores itinerantes desde la
-  agencia más cercana, con agentes o con agencia móvil?
+- **Competencia mapeada desde sus webs**: Mibanco, Efectiva y las cajas Arequipa, Del Santa y Paita (37 oficinas;
+  las cifras cuadran con la SBS). En La Libertad hay 145 oficinas: Caja Trujillo lidera con 24, pero **las otras cajas
+  municipales ya suman 33**.
+- **Zonas prioritarias sin agencia de Caja Trujillo**: 6 de 15 si no se descuenta la competencia; **12 de 15** si se
+  descuenta. En ambos casos aparecen 5 zonas agro de la sierra (Julcán, Usquil y Salpo, a 20-30 km de la agencia de
+  Otuzco; Chugay y Sartimbamba, a 28-38 km de la de Huamachuco) y Florencia de Mora (45 mil adultos, sin la Caja ni
+  competidores). Con descuento entran zonas urbanas medianas sin nadie: Paiján, Casa Grande, Moche, Chao.
+  Pregunta clave: ¿se cubren con asesores itinerantes desde la agencia más cercana, con agentes o con agencia móvil?
 - Explicar los dos segmentos (urbano y agro) y mostrar en vivo cómo cambia la lista al mover α y el cupo agro.
 - Dejar claro lo que **no** es: no califica personas, no es scoring de crédito, no usa datos personales.
 
@@ -29,7 +33,7 @@ Para cada pregunta: qué hacemos según lo que responda. **Anotar la respuesta t
 |---|---|
 | "Dónde abrir agencia u oficina" | Horizonte de 3-5 años, peso alto al volumen, modelo de canibalización entre agencias. |
 | "A qué zonas mandar a los asesores esta semana" | Bajamos a hexágonos H3 y rutas diarias; el entregable estrella es la app del asesor. |
-| "Dónde poner agentes o corresponsales" | Peso alto a intensidad y ruralidad; el cruce con la oferta SBS es crítico. |
+| "Dónde poner agentes o corresponsales" | Peso alto a intensidad y ruralidad; el cruce con la competencia es crítico (hoy no tenemos agentes corresponsales). |
 
 ### P2. ¿Quién la usa todos los días?
 - Analista o asesor de negocios → vista móvil, lista de zonas y rutas.
@@ -42,6 +46,9 @@ Para cada pregunta: qué hacemos según lo que responda. **Anotar la respuesta t
   Los datos no deciden esto: depende del apetito de riesgo agro de la Caja y de los productos que tiene.
 - **α:** dentro de cada segmento, ¿prioriza dónde hay más gente (volumen) o dónde la brecha es mayor (intensidad)?
   Mostrar el top-15 con α = 0,6 frente a α = 0,3.
+- **Competencia:** ¿la presencia de Mibanco, Efectiva u otras cajas en un distrito es una señal de **saturación**
+  (restar puntos) o de **demanda comprobada** (no restar)? Mostrar el ranking con `--penalidad-competencia 0.3`
+  frente a `0`. Esto cambia mucho la lista: El Porvenir, Virú y Chepén bajan; Paiján, Casa Grande y Moche suben.
 - Advertencia de la auditoría: con α = 0,6 **ningún distrito del tercio más remoto** entra al top-15, ni siquiera
   por agro. Si quiere llegar ahí, probablemente le convenga otro canal (agentes, agencia móvil) en lugar de asesores.
 

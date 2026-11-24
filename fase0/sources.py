@@ -42,6 +42,14 @@ SOURCES = {
         "min_bytes": 500,
         "refresh": "estática",
     },
+    "cenagro": {
+        "desc": "Censo Nacional Agropecuario 2012 (INEI) - productores agropecuarios con coordenadas",
+        "url": "https://www.inei.gob.pe/media/DATOS_ABIERTOS/CENAGRO/DATA_NEW/2012.zip",
+        "dest": "cenagro/2012.zip",
+        "mode": "auto",
+        "min_bytes": 500_000_000,
+        "refresh": "estática (2012; el próximo CENAGRO aún no publica microdatos)",
+    },
     "limites_distritales": {
         "desc": "Polígonos distritales INEI (GeoJSON simplificado)",
         "url": "https://raw.githubusercontent.com/juaneladio/peru-geojson/master/peru_distrital_simple.geojson",

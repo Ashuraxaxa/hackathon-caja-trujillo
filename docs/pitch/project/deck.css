@@ -1,13 +1,16 @@
+/* Identidad tomada de cajathon.cajatrujillo.com.pe: negro, rojo #F5220F, Chakra Petch + Inter + Space Mono */
 :root {
-  --ink: #14213D;
-  --paper: #F7F5EF;
-  --paper2: #ECE8DD;
-  --accent: #B8410E;
-  --accent-soft: #F4A261;
-  --urb: #2F5DA8;
-  --muted: #4A5568;
-  --muted-dark: #C9D3E3;
-  --line: #D6D0C2;
+  --ink: #F2F2F2;
+  --paper: #0B0B0B;
+  --paper2: #1E1E1E;
+  --card: #161616;
+  --accent: #F5220F;
+  --accent-soft: #F5220F;
+  --urb: #3987E5;
+  --muted: #BDBDBD;
+  --muted-dark: #BDBDBD;
+  --line: #2A2A2A;
+  --black: #101010;
 }
 
 body { font-family: 'Inter', Arial, sans-serif; color: var(--ink); }
@@ -21,51 +24,74 @@ section {
   flex-direction: column;
   counter-increment: page;
 }
-section.alt { background: var(--paper2); }
-section.dark { background: var(--ink); color: var(--paper); }
+section.alt { background: #141414; }
+section.dark { background: #000000; color: var(--ink); }
+section.red { background: var(--accent); color: var(--black); }
 
-h1, h2, h3, .big { font-family: 'Space Grotesk', Arial, sans-serif; }
+h1, h2, h3, .big, .hl { font-family: 'Chakra Petch', Arial, sans-serif; }
 h1 { font-size: 120px; font-weight: 700; line-height: 1.02; letter-spacing: -2px; margin: 0; }
-h2 { font-size: 72px; font-weight: 700; line-height: 1.08; letter-spacing: -1px; margin: 0 0 48px; }
-h3 { font-size: 32px; font-weight: 600; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 72px; font-weight: 700; line-height: 1.08; letter-spacing: -1.5px; margin: 0 0 48px; }
+h3 { font-size: 32px; font-weight: 700; line-height: 1.2; margin: 0 0 12px; }
 p { font-size: 32px; line-height: 1.4; margin: 0; }
 
-.eyebrow { font-size: 24px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin: 0 0 20px; }
-.dark .eyebrow { color: var(--accent-soft); }
+/* etiqueta tipo "DESAFÍA TUS LÍMITES." */
+.eyebrow {
+  align-self: flex-start;
+  font-family: 'Space Mono', 'Courier New', monospace;
+  font-size: 24px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ink); background: var(--paper2); padding: 6px 16px; margin: 0 0 32px;
+}
+.red .eyebrow { background: var(--black); color: var(--ink); }
+
 .lead { font-size: 32px; color: var(--muted); max-width: 1400px; }
-.dark .lead { color: var(--muted-dark); }
-.small { font-size: 24px; color: var(--muted); line-height: 1.4; }
-.dark .small { color: var(--muted-dark); }
+.dark .lead { color: var(--muted); }
+.red .lead { color: var(--black); }
+.small { font-size: 24px; color: var(--muted); line-height: 1.45; }
+.dark .small { color: var(--muted); }
+.red .small { color: var(--black); }
+
+/* rayita roja sobre los párrafos, como en la web */
+.rule { width: 48px; height: 6px; background: var(--accent); margin: 0 0 24px; }
+.red .rule { background: var(--black); }
 
 .foot {
   position: absolute; left: 128px; bottom: 64px; width: 1664px;
-  font-size: 24px; color: var(--muted); margin: 0;
+  font-family: 'Space Mono', 'Courier New', monospace;
+  font-size: 24px; color: #8C8C8C; margin: 0;
 }
-.dark .foot { color: var(--muted-dark); }
+.red .foot { color: var(--black); }
 
-/* tarjetas */
-.row { display: flex; gap: 32px; }
-.card { flex: 1; background: var(--paper); border: 2px solid var(--line); border-radius: 16px; padding: 36px 40px; }
-.alt .card { background: var(--paper); }
+/* tarjetas: gris oscuro, esquinas rectas */
+.row { display: flex; gap: 24px; }
+.card { flex: 1; background: var(--card); border: 2px solid var(--line); padding: 36px 40px; }
+.alt .card { background: #0B0B0B; }
 .card .small { margin-top: 8px; }
 .card.accent { border-color: var(--accent); }
 .card.urb { border-color: var(--urb); }
 
 /* números grandes */
-.big { font-size: 120px; font-weight: 700; line-height: 1; letter-spacing: -3px; margin: 0 0 12px; }
+.big { font-size: 120px; font-weight: 700; line-height: 1; letter-spacing: -3px; margin: 0 0 12px; color: var(--ink); }
 .big.mid { font-size: 96px; }
-.dark .big { color: var(--accent-soft); }
+.dark .big { color: var(--accent); }
+.red .big { color: #FFFFFF; }
 .big.urb { color: var(--urb); }
 .big.acc { color: var(--accent); }
 
-/* etiquetas de segmento */
-.tag { display: inline-block; font-size: 24px; font-weight: 600; padding: 4px 16px; border-radius: 999px; margin: 0; }
-.tag.agro { background: #F6DCCB; color: #7A2A08; }
-.tag.urbano { background: #D6E1F3; color: #1E3D72; }
+/* palabra resaltada en caja roja */
+.hl { display: inline-block; background: var(--accent); color: #FFFFFF; padding: 0 24px; }
+.op { color: var(--accent); }
+
+/* etiquetas de segmento (mono, como "/data") */
+.tag {
+  display: inline-block; font-family: 'Space Mono', 'Courier New', monospace;
+  font-size: 24px; font-weight: 700; padding: 4px 14px; margin: 0; background: var(--paper2);
+}
+.tag.agro { color: #FF6B5C; }
+.tag.urbano { color: #7FB2F0; }
 
 table { font-size: 26px; color: var(--ink); width: 100%; }
 tr.head { background: var(--paper2); }
-.alt tr.head { background: var(--paper); }
+.alt tr.head { background: var(--paper2); }
 
 /* llegada */
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }

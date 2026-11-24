@@ -19,9 +19,9 @@ El ámbito piloto se define en `fase0/sources.py` (`DEPARTAMENTOS_PILOTO = ["13"
 | Límites distritales | auto | polígonos para mapa y H3 | distrito |
 | OpenStreetMap (Geofabrik) | opcional | bancos, ATMs, agentes, comercios con coordenadas | punto |
 | SBS oficinas y puntos de atención | **manual** (antibot) | oferta financiera existente | distrito |
-| PCM tipología de distritos | **manual** (Google Drive) | urbano/rural, accesibilidad | distrito |
 
-Las fuentes manuales se descargan desde el navegador y se dejan en `data/raw/sbs/` y `data/raw/pcm/`; `validate.py` detecta si están.
+La fuente manual (SBS) se descarga desde el navegador y se deja en `data/raw/sbs/`; `validate.py` detecta si está.
+La tipología de distritos de la PCM se descartó porque ya no se puede descargar; la ruralidad se aproxima con densidad y CENAGRO.
 
 ## Salidas (`data/interim/`)
 

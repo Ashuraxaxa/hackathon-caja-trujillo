@@ -77,17 +77,10 @@ SOURCES = {
                "'Número de oficinas' y 'Puntos de atención' (último mes). Guardar los "
                "Excel en data/raw/sbs/.",
     },
-    "pcm_tipologia": {
-        "desc": "Tipología de distritos (PCM) - urbano/rural, accesibilidad",
-        "url": "https://www.datosabiertos.gob.pe/dataset/tipologia-de-distritos",
-        "dest": "pcm/",
-        "mode": "manual",
-        "min_bytes": 10_000,
-        "refresh": "estática",
-        "how": "El archivo está en Google Drive: abrir el dataset, botón 'Ir al recurso', "
-               "descargar y guardar en data/raw/pcm/.",
-    },
 }
+
+# Descartada: PCM "Tipología de distritos" (los archivos en Google Drive ya no están disponibles).
+# La ruralidad se aproxima con densidad (RENIEC / área) y el segmento agro con CENAGRO.
 
 # Departamento piloto: La Libertad (ubigeo INEI 13). Cambiar aquí si el owner amplía alcance.
 DEPARTAMENTOS_PILOTO = ["13"]

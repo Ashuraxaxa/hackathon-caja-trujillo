@@ -1,6 +1,6 @@
 # Índice de oportunidad v1 — La Libertad
 
-alpha (peso de VOLUMEN) = **0.6** · cupo agro = **40%** · oferta financiera SBS: **pendiente** · 84 distritos
+alpha (peso de VOLUMEN) = **0.6** · cupo agro = **40%** · oferta financiera por distrito: **pendiente** · 84 distritos
 
 ## Cómo se calcula
 
@@ -68,6 +68,6 @@ La lista combinada intercala el ranking de cada segmento: 40% de los puestos par
 
 - El padrón RUC reducido solo trae ubigeo para personas jurídicas (RUC 20); las personas naturales con negocio (RUC 10) casi nunca lo tienen. `ruc_activos_habidos` mide **empresas formales**, no microempresarios.
 - CENAMA es de 2016 y CENAGRO de 2012: la estructura es estable, pero los montos pueden haber cambiado.
-- Sin datos SBS el índice no sabe dónde ya hay agencias/agentes: puede priorizar zonas ya atendidas.
+- Sin oferta por distrito (la SBS solo publica oficinas por departamento) el índice no sabe dónde ya hay agencias/agentes: puede priorizar zonas ya atendidas.
 - Es un índice de priorización territorial, no evalúa a personas ni su riesgo crediticio.
 - Alto Trujillo (130112) no tiene polígono en el mapa base: aparece en el ranking pero no en el mapa.

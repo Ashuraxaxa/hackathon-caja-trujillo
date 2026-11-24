@@ -18,7 +18,7 @@ El ámbito piloto se define en `fase0/sources.py` (`DEPARTAMENTOS_PILOTO = ["13"
 | CENAGRO 2012 (INEI) | auto | productores agro, acceso a crédito y barreras (~760 MB) | distrito + centroide SEA |
 | Límites distritales | auto | polígonos para mapa y H3 | distrito |
 | OpenStreetMap (Geofabrik) | opcional | bancos, ATMs, agentes, comercios con coordenadas | punto |
-| SBS oficinas y puntos de atención | **manual** (antibot) | oferta financiera existente | distrito |
+| SBS oficinas por zona geográfica | **manual** (antibot) | oficinas por entidad (contexto competitivo) | departamento |
 
 La fuente manual (SBS) se descarga desde el navegador y se deja en `data/raw/sbs/`; `validate.py` detecta si está.
 La tipología de distritos de la PCM se descartó porque ya no se puede descargar; la ruralidad se aproxima con densidad y CENAGRO.
@@ -49,8 +49,10 @@ limitaciones) y `mapa_indice_v1.html` (se abre con doble clic y funciona sin int
   habitante). `alpha` es el peso del volumen.
 - Comparar un distrito urbano con uno agro es una decisión de cartera, no algo que decidan los datos. Por eso la lista
   final intercala los rankings de ambos segmentos según `--cupo-agro`.
-- Cuando estén los datos SBS, se deja `data/interim/oferta_por_distrito.parquet` (`ubigeo`, `puntos_atencion`)
-  y el índice penaliza hasta un 30 % a los distritos que ya tienen muchos puntos de atención.
+- **Oferta financiera por distrito**: la SBS solo publica oficinas por departamento (`python fase0/sbs.py` las resume
+  como contexto competitivo). El detalle por distrito se llena a mano en `data/manual/oferta_distrital.csv` usando los
+  buscadores de agencias de cada entidad (celda vacía = sin dato; 0 = verificado que no hay). Cuando la plantilla
+  tiene al menos el 80 % de los distritos llenos, el índice penaliza hasta un 30 % a los distritos más atendidos.
 - La estabilidad se mide con 1 000 simulaciones que mueven los pesos y alpha. La auditoría compara los resultados
   por tercil de densidad.
 

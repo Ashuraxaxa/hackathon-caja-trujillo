@@ -1,0 +1,776 @@
+﻿empresa,departamento,oficinas,fecha,tipo
+B. BBVA Perú,Amazonas,1,2026-09-30,banca múltiple
+B. BBVA Perú,Ancash,4,2026-09-30,banca múltiple
+B. BBVA Perú,Apurimac,3,2026-09-30,banca múltiple
+B. BBVA Perú,Arequipa,13,2026-09-30,banca múltiple
+B. BBVA Perú,Ayacucho,1,2026-09-30,banca múltiple
+B. BBVA Perú,Cajamarca,4,2026-09-30,banca múltiple
+B. BBVA Perú,Callao,9,2026-09-30,banca múltiple
+B. BBVA Perú,Cusco,9,2026-09-30,banca múltiple
+B. BBVA Perú,Huancavelica,0,2026-09-30,banca múltiple
+B. BBVA Perú,Huanuco,3,2026-09-30,banca múltiple
+B. BBVA Perú,Ica,4,2026-09-30,banca múltiple
+B. BBVA Perú,Junin,8,2026-09-30,banca múltiple
+B. BBVA Perú,La Libertad,10,2026-09-30,banca múltiple
+B. BBVA Perú,Lambayeque,6,2026-09-30,banca múltiple
+B. BBVA Perú,Lima,160,2026-09-30,banca múltiple
+B. BBVA Perú,Loreto,3,2026-09-30,banca múltiple
+B. BBVA Perú,Madre de Dios,1,2026-09-30,banca múltiple
+B. BBVA Perú,Moquegua,2,2026-09-30,banca múltiple
+B. BBVA Perú,Pasco,1,2026-09-30,banca múltiple
+B. BBVA Perú,Piura,7,2026-09-30,banca múltiple
+B. BBVA Perú,Puno,3,2026-09-30,banca múltiple
+B. BBVA Perú,San Martin,6,2026-09-30,banca múltiple
+B. BBVA Perú,Tacna,2,2026-09-30,banca múltiple
+B. BBVA Perú,Tumbes,1,2026-09-30,banca múltiple
+B. BBVA Perú,Ucayali,3,2026-09-30,banca múltiple
+BANCOM,Amazonas,0,2026-09-30,banca múltiple
+BANCOM,Ancash,0,2026-09-30,banca múltiple
+BANCOM,Apurimac,0,2026-09-30,banca múltiple
+BANCOM,Arequipa,1,2026-09-30,banca múltiple
+BANCOM,Ayacucho,0,2026-09-30,banca múltiple
+BANCOM,Cajamarca,1,2026-09-30,banca múltiple
+BANCOM,Callao,0,2026-09-30,banca múltiple
+BANCOM,Cusco,1,2026-09-30,banca múltiple
+BANCOM,Huancavelica,0,2026-09-30,banca múltiple
+BANCOM,Huanuco,0,2026-09-30,banca múltiple
+BANCOM,Ica,1,2026-09-30,banca múltiple
+BANCOM,Junin,1,2026-09-30,banca múltiple
+BANCOM,La Libertad,1,2026-09-30,banca múltiple
+BANCOM,Lambayeque,1,2026-09-30,banca múltiple
+BANCOM,Lima,12,2026-09-30,banca múltiple
+BANCOM,Loreto,1,2026-09-30,banca múltiple
+BANCOM,Madre de Dios,0,2026-09-30,banca múltiple
+BANCOM,Moquegua,0,2026-09-30,banca múltiple
+BANCOM,Pasco,0,2026-09-30,banca múltiple
+BANCOM,Piura,3,2026-09-30,banca múltiple
+BANCOM,Puno,0,2026-09-30,banca múltiple
+BANCOM,San Martin,1,2026-09-30,banca múltiple
+BANCOM,Tacna,0,2026-09-30,banca múltiple
+BANCOM,Tumbes,1,2026-09-30,banca múltiple
+BANCOM,Ucayali,1,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Amazonas,3,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Ancash,9,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Apurimac,2,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Arequipa,17,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Ayacucho,2,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Cajamarca,5,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Callao,9,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Cusco,10,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Huancavelica,1,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Huanuco,3,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Ica,8,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Junin,13,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),La Libertad,11,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Lambayeque,8,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Lima,168,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Loreto,4,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Madre de Dios,1,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Moquegua,5,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Pasco,3,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Piura,11,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Puno,4,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),San Martin,6,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Tacna,4,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Tumbes,1,2026-09-30,banca múltiple
+B. de Crédito del Perú (con sucursales en el exterior),Ucayali,3,2026-09-30,banca múltiple
+B. Pichincha,Amazonas,0,2026-09-30,banca múltiple
+B. Pichincha,Ancash,1,2026-09-30,banca múltiple
+B. Pichincha,Apurimac,0,2026-09-30,banca múltiple
+B. Pichincha,Arequipa,1,2026-09-30,banca múltiple
+B. Pichincha,Ayacucho,0,2026-09-30,banca múltiple
+B. Pichincha,Cajamarca,0,2026-09-30,banca múltiple
+B. Pichincha,Callao,0,2026-09-30,banca múltiple
+B. Pichincha,Cusco,0,2026-09-30,banca múltiple
+B. Pichincha,Huancavelica,0,2026-09-30,banca múltiple
+B. Pichincha,Huanuco,0,2026-09-30,banca múltiple
+B. Pichincha,Ica,0,2026-09-30,banca múltiple
+B. Pichincha,Junin,0,2026-09-30,banca múltiple
+B. Pichincha,La Libertad,1,2026-09-30,banca múltiple
+B. Pichincha,Lambayeque,1,2026-09-30,banca múltiple
+B. Pichincha,Lima,8,2026-09-30,banca múltiple
+B. Pichincha,Loreto,0,2026-09-30,banca múltiple
+B. Pichincha,Madre de Dios,0,2026-09-30,banca múltiple
+B. Pichincha,Moquegua,0,2026-09-30,banca múltiple
+B. Pichincha,Pasco,0,2026-09-30,banca múltiple
+B. Pichincha,Piura,1,2026-09-30,banca múltiple
+B. Pichincha,Puno,0,2026-09-30,banca múltiple
+B. Pichincha,San Martin,0,2026-09-30,banca múltiple
+B. Pichincha,Tacna,0,2026-09-30,banca múltiple
+B. Pichincha,Tumbes,0,2026-09-30,banca múltiple
+B. Pichincha,Ucayali,0,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Amazonas,0,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Ancash,1,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Apurimac,0,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Arequipa,2,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Ayacucho,0,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Cajamarca,1,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Callao,2,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Cusco,2,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Huancavelica,0,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Huanuco,0,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Ica,2,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Junin,1,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,La Libertad,2,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Lambayeque,2,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Lima,38,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Loreto,1,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Madre de Dios,0,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Moquegua,0,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Pasco,0,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Piura,3,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Puno,1,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,San Martin,1,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Tacna,1,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Tumbes,0,2026-09-30,banca múltiple
+B. Interamericano de Finanzas,Ucayali,1,2026-09-30,banca múltiple
+Scotiabank Perú,Amazonas,0,2026-09-30,banca múltiple
+Scotiabank Perú,Ancash,2,2026-09-30,banca múltiple
+Scotiabank Perú,Apurimac,0,2026-09-30,banca múltiple
+Scotiabank Perú,Arequipa,7,2026-09-30,banca múltiple
+Scotiabank Perú,Ayacucho,0,2026-09-30,banca múltiple
+Scotiabank Perú,Cajamarca,3,2026-09-30,banca múltiple
+Scotiabank Perú,Callao,5,2026-09-30,banca múltiple
+Scotiabank Perú,Cusco,4,2026-09-30,banca múltiple
+Scotiabank Perú,Huancavelica,0,2026-09-30,banca múltiple
+Scotiabank Perú,Huanuco,2,2026-09-30,banca múltiple
+Scotiabank Perú,Ica,3,2026-09-30,banca múltiple
+Scotiabank Perú,Junin,4,2026-09-30,banca múltiple
+Scotiabank Perú,La Libertad,5,2026-09-30,banca múltiple
+Scotiabank Perú,Lambayeque,3,2026-09-30,banca múltiple
+Scotiabank Perú,Lima,92,2026-09-30,banca múltiple
+Scotiabank Perú,Loreto,1,2026-09-30,banca múltiple
+Scotiabank Perú,Madre de Dios,1,2026-09-30,banca múltiple
+Scotiabank Perú,Moquegua,2,2026-09-30,banca múltiple
+Scotiabank Perú,Pasco,1,2026-09-30,banca múltiple
+Scotiabank Perú,Piura,5,2026-09-30,banca múltiple
+Scotiabank Perú,Puno,2,2026-09-30,banca múltiple
+Scotiabank Perú,San Martin,2,2026-09-30,banca múltiple
+Scotiabank Perú,Tacna,2,2026-09-30,banca múltiple
+Scotiabank Perú,Tumbes,1,2026-09-30,banca múltiple
+Scotiabank Perú,Ucayali,1,2026-09-30,banca múltiple
+Citibank,Amazonas,0,2026-09-30,banca múltiple
+Citibank,Ancash,0,2026-09-30,banca múltiple
+Citibank,Apurimac,0,2026-09-30,banca múltiple
+Citibank,Arequipa,0,2026-09-30,banca múltiple
+Citibank,Ayacucho,0,2026-09-30,banca múltiple
+Citibank,Cajamarca,0,2026-09-30,banca múltiple
+Citibank,Callao,0,2026-09-30,banca múltiple
+Citibank,Cusco,0,2026-09-30,banca múltiple
+Citibank,Huancavelica,0,2026-09-30,banca múltiple
+Citibank,Huanuco,0,2026-09-30,banca múltiple
+Citibank,Ica,0,2026-09-30,banca múltiple
+Citibank,Junin,0,2026-09-30,banca múltiple
+Citibank,La Libertad,0,2026-09-30,banca múltiple
+Citibank,Lambayeque,0,2026-09-30,banca múltiple
+Citibank,Lima,1,2026-09-30,banca múltiple
+Citibank,Loreto,0,2026-09-30,banca múltiple
+Citibank,Madre de Dios,0,2026-09-30,banca múltiple
+Citibank,Moquegua,0,2026-09-30,banca múltiple
+Citibank,Pasco,0,2026-09-30,banca múltiple
+Citibank,Piura,0,2026-09-30,banca múltiple
+Citibank,Puno,0,2026-09-30,banca múltiple
+Citibank,San Martin,0,2026-09-30,banca múltiple
+Citibank,Tacna,0,2026-09-30,banca múltiple
+Citibank,Tumbes,0,2026-09-30,banca múltiple
+Citibank,Ucayali,0,2026-09-30,banca múltiple
+Interbank,Amazonas,0,2026-09-30,banca múltiple
+Interbank,Ancash,2,2026-09-30,banca múltiple
+Interbank,Apurimac,2,2026-09-30,banca múltiple
+Interbank,Arequipa,8,2026-09-30,banca múltiple
+Interbank,Ayacucho,1,2026-09-30,banca múltiple
+Interbank,Cajamarca,2,2026-09-30,banca múltiple
+Interbank,Callao,6,2026-09-30,banca múltiple
+Interbank,Cusco,4,2026-09-30,banca múltiple
+Interbank,Huancavelica,0,2026-09-30,banca múltiple
+Interbank,Huanuco,1,2026-09-30,banca múltiple
+Interbank,Ica,7,2026-09-30,banca múltiple
+Interbank,Junin,3,2026-09-30,banca múltiple
+Interbank,La Libertad,6,2026-09-30,banca múltiple
+Interbank,Lambayeque,3,2026-09-30,banca múltiple
+Interbank,Lima,77,2026-09-30,banca múltiple
+Interbank,Loreto,2,2026-09-30,banca múltiple
+Interbank,Madre de Dios,1,2026-09-30,banca múltiple
+Interbank,Moquegua,2,2026-09-30,banca múltiple
+Interbank,Pasco,1,2026-09-30,banca múltiple
+Interbank,Piura,6,2026-09-30,banca múltiple
+Interbank,Puno,3,2026-09-30,banca múltiple
+Interbank,San Martin,2,2026-09-30,banca múltiple
+Interbank,Tacna,2,2026-09-30,banca múltiple
+Interbank,Tumbes,1,2026-09-30,banca múltiple
+Interbank,Ucayali,2,2026-09-30,banca múltiple
+Mibanco,Amazonas,4,2026-09-30,banca múltiple
+Mibanco,Ancash,17,2026-09-30,banca múltiple
+Mibanco,Apurimac,4,2026-09-30,banca múltiple
+Mibanco,Arequipa,22,2026-09-30,banca múltiple
+Mibanco,Ayacucho,5,2026-09-30,banca múltiple
+Mibanco,Cajamarca,18,2026-09-30,banca múltiple
+Mibanco,Callao,7,2026-09-30,banca múltiple
+Mibanco,Cusco,18,2026-09-30,banca múltiple
+Mibanco,Huancavelica,3,2026-09-30,banca múltiple
+Mibanco,Huanuco,5,2026-09-30,banca múltiple
+Mibanco,Ica,5,2026-09-30,banca múltiple
+Mibanco,Junin,12,2026-09-30,banca múltiple
+Mibanco,La Libertad,13,2026-09-30,banca múltiple
+Mibanco,Lambayeque,14,2026-09-30,banca múltiple
+Mibanco,Lima,71,2026-09-30,banca múltiple
+Mibanco,Loreto,1,2026-09-30,banca múltiple
+Mibanco,Madre de Dios,1,2026-09-30,banca múltiple
+Mibanco,Moquegua,3,2026-09-30,banca múltiple
+Mibanco,Pasco,3,2026-09-30,banca múltiple
+Mibanco,Piura,21,2026-09-30,banca múltiple
+Mibanco,Puno,18,2026-09-30,banca múltiple
+Mibanco,San Martin,8,2026-09-30,banca múltiple
+Mibanco,Tacna,4,2026-09-30,banca múltiple
+Mibanco,Tumbes,3,2026-09-30,banca múltiple
+Mibanco,Ucayali,2,2026-09-30,banca múltiple
+B. GNB,Amazonas,0,2026-09-30,banca múltiple
+B. GNB,Ancash,0,2026-09-30,banca múltiple
+B. GNB,Apurimac,0,2026-09-30,banca múltiple
+B. GNB,Arequipa,1,2026-09-30,banca múltiple
+B. GNB,Ayacucho,0,2026-09-30,banca múltiple
+B. GNB,Cajamarca,0,2026-09-30,banca múltiple
+B. GNB,Callao,0,2026-09-30,banca múltiple
+B. GNB,Cusco,0,2026-09-30,banca múltiple
+B. GNB,Huancavelica,0,2026-09-30,banca múltiple
+B. GNB,Huanuco,0,2026-09-30,banca múltiple
+B. GNB,Ica,0,2026-09-30,banca múltiple
+B. GNB,Junin,0,2026-09-30,banca múltiple
+B. GNB,La Libertad,1,2026-09-30,banca múltiple
+B. GNB,Lambayeque,1,2026-09-30,banca múltiple
+B. GNB,Lima,7,2026-09-30,banca múltiple
+B. GNB,Loreto,0,2026-09-30,banca múltiple
+B. GNB,Madre de Dios,0,2026-09-30,banca múltiple
+B. GNB,Moquegua,0,2026-09-30,banca múltiple
+B. GNB,Pasco,0,2026-09-30,banca múltiple
+B. GNB,Piura,1,2026-09-30,banca múltiple
+B. GNB,Puno,0,2026-09-30,banca múltiple
+B. GNB,San Martin,0,2026-09-30,banca múltiple
+B. GNB,Tacna,0,2026-09-30,banca múltiple
+B. GNB,Tumbes,0,2026-09-30,banca múltiple
+B. GNB,Ucayali,0,2026-09-30,banca múltiple
+B. Falabella Perú,Amazonas,0,2026-09-30,banca múltiple
+B. Falabella Perú,Ancash,1,2026-09-30,banca múltiple
+B. Falabella Perú,Apurimac,0,2026-09-30,banca múltiple
+B. Falabella Perú,Arequipa,2,2026-09-30,banca múltiple
+B. Falabella Perú,Ayacucho,0,2026-09-30,banca múltiple
+B. Falabella Perú,Cajamarca,1,2026-09-30,banca múltiple
+B. Falabella Perú,Callao,3,2026-09-30,banca múltiple
+B. Falabella Perú,Cusco,2,2026-09-30,banca múltiple
+B. Falabella Perú,Huancavelica,0,2026-09-30,banca múltiple
+B. Falabella Perú,Huanuco,1,2026-09-30,banca múltiple
+B. Falabella Perú,Ica,3,2026-09-30,banca múltiple
+B. Falabella Perú,Junin,1,2026-09-30,banca múltiple
+B. Falabella Perú,La Libertad,4,2026-09-30,banca múltiple
+B. Falabella Perú,Lambayeque,2,2026-09-30,banca múltiple
+B. Falabella Perú,Lima,28,2026-09-30,banca múltiple
+B. Falabella Perú,Loreto,1,2026-09-30,banca múltiple
+B. Falabella Perú,Madre de Dios,0,2026-09-30,banca múltiple
+B. Falabella Perú,Moquegua,0,2026-09-30,banca múltiple
+B. Falabella Perú,Pasco,0,2026-09-30,banca múltiple
+B. Falabella Perú,Piura,3,2026-09-30,banca múltiple
+B. Falabella Perú,Puno,0,2026-09-30,banca múltiple
+B. Falabella Perú,San Martin,0,2026-09-30,banca múltiple
+B. Falabella Perú,Tacna,1,2026-09-30,banca múltiple
+B. Falabella Perú,Tumbes,0,2026-09-30,banca múltiple
+B. Falabella Perú,Ucayali,1,2026-09-30,banca múltiple
+B. Santander Perú,Amazonas,0,2026-09-30,banca múltiple
+B. Santander Perú,Ancash,0,2026-09-30,banca múltiple
+B. Santander Perú,Apurimac,0,2026-09-30,banca múltiple
+B. Santander Perú,Arequipa,0,2026-09-30,banca múltiple
+B. Santander Perú,Ayacucho,0,2026-09-30,banca múltiple
+B. Santander Perú,Cajamarca,0,2026-09-30,banca múltiple
+B. Santander Perú,Callao,0,2026-09-30,banca múltiple
+B. Santander Perú,Cusco,0,2026-09-30,banca múltiple
+B. Santander Perú,Huancavelica,0,2026-09-30,banca múltiple
+B. Santander Perú,Huanuco,0,2026-09-30,banca múltiple
+B. Santander Perú,Ica,0,2026-09-30,banca múltiple
+B. Santander Perú,Junin,0,2026-09-30,banca múltiple
+B. Santander Perú,La Libertad,0,2026-09-30,banca múltiple
+B. Santander Perú,Lambayeque,0,2026-09-30,banca múltiple
+B. Santander Perú,Lima,1,2026-09-30,banca múltiple
+B. Santander Perú,Loreto,0,2026-09-30,banca múltiple
+B. Santander Perú,Madre de Dios,0,2026-09-30,banca múltiple
+B. Santander Perú,Moquegua,0,2026-09-30,banca múltiple
+B. Santander Perú,Pasco,0,2026-09-30,banca múltiple
+B. Santander Perú,Piura,0,2026-09-30,banca múltiple
+B. Santander Perú,Puno,0,2026-09-30,banca múltiple
+B. Santander Perú,San Martin,0,2026-09-30,banca múltiple
+B. Santander Perú,Tacna,0,2026-09-30,banca múltiple
+B. Santander Perú,Tumbes,0,2026-09-30,banca múltiple
+B. Santander Perú,Ucayali,0,2026-09-30,banca múltiple
+B. Ripley,Amazonas,0,2026-09-30,banca múltiple
+B. Ripley,Ancash,1,2026-09-30,banca múltiple
+B. Ripley,Apurimac,0,2026-09-30,banca múltiple
+B. Ripley,Arequipa,2,2026-09-30,banca múltiple
+B. Ripley,Ayacucho,0,2026-09-30,banca múltiple
+B. Ripley,Cajamarca,1,2026-09-30,banca múltiple
+B. Ripley,Callao,1,2026-09-30,banca múltiple
+B. Ripley,Cusco,0,2026-09-30,banca múltiple
+B. Ripley,Huancavelica,0,2026-09-30,banca múltiple
+B. Ripley,Huanuco,0,2026-09-30,banca múltiple
+B. Ripley,Ica,1,2026-09-30,banca múltiple
+B. Ripley,Junin,1,2026-09-30,banca múltiple
+B. Ripley,La Libertad,1,2026-09-30,banca múltiple
+B. Ripley,Lambayeque,2,2026-09-30,banca múltiple
+B. Ripley,Lima,17,2026-09-30,banca múltiple
+B. Ripley,Loreto,1,2026-09-30,banca múltiple
+B. Ripley,Madre de Dios,0,2026-09-30,banca múltiple
+B. Ripley,Moquegua,0,2026-09-30,banca múltiple
+B. Ripley,Pasco,0,2026-09-30,banca múltiple
+B. Ripley,Piura,1,2026-09-30,banca múltiple
+B. Ripley,Puno,1,2026-09-30,banca múltiple
+B. Ripley,San Martin,0,2026-09-30,banca múltiple
+B. Ripley,Tacna,0,2026-09-30,banca múltiple
+B. Ripley,Tumbes,0,2026-09-30,banca múltiple
+B. Ripley,Ucayali,1,2026-09-30,banca múltiple
+Alfin Banco,Amazonas,0,2026-09-30,banca múltiple
+Alfin Banco,Ancash,2,2026-09-30,banca múltiple
+Alfin Banco,Apurimac,0,2026-09-30,banca múltiple
+Alfin Banco,Arequipa,2,2026-09-30,banca múltiple
+Alfin Banco,Ayacucho,0,2026-09-30,banca múltiple
+Alfin Banco,Cajamarca,1,2026-09-30,banca múltiple
+Alfin Banco,Callao,1,2026-09-30,banca múltiple
+Alfin Banco,Cusco,1,2026-09-30,banca múltiple
+Alfin Banco,Huancavelica,0,2026-09-30,banca múltiple
+Alfin Banco,Huanuco,1,2026-09-30,banca múltiple
+Alfin Banco,Ica,3,2026-09-30,banca múltiple
+Alfin Banco,Junin,1,2026-09-30,banca múltiple
+Alfin Banco,La Libertad,2,2026-09-30,banca múltiple
+Alfin Banco,Lambayeque,2,2026-09-30,banca múltiple
+Alfin Banco,Lima,18,2026-09-30,banca múltiple
+Alfin Banco,Loreto,1,2026-09-30,banca múltiple
+Alfin Banco,Madre de Dios,0,2026-09-30,banca múltiple
+Alfin Banco,Moquegua,0,2026-09-30,banca múltiple
+Alfin Banco,Pasco,0,2026-09-30,banca múltiple
+Alfin Banco,Piura,2,2026-09-30,banca múltiple
+Alfin Banco,Puno,1,2026-09-30,banca múltiple
+Alfin Banco,San Martin,1,2026-09-30,banca múltiple
+Alfin Banco,Tacna,1,2026-09-30,banca múltiple
+Alfin Banco,Tumbes,1,2026-09-30,banca múltiple
+Alfin Banco,Ucayali,1,2026-09-30,banca múltiple
+B. ICBC,Amazonas,0,2026-09-30,banca múltiple
+B. ICBC,Ancash,0,2026-09-30,banca múltiple
+B. ICBC,Apurimac,0,2026-09-30,banca múltiple
+B. ICBC,Arequipa,0,2026-09-30,banca múltiple
+B. ICBC,Ayacucho,0,2026-09-30,banca múltiple
+B. ICBC,Cajamarca,0,2026-09-30,banca múltiple
+B. ICBC,Callao,0,2026-09-30,banca múltiple
+B. ICBC,Cusco,0,2026-09-30,banca múltiple
+B. ICBC,Huancavelica,0,2026-09-30,banca múltiple
+B. ICBC,Huanuco,0,2026-09-30,banca múltiple
+B. ICBC,Ica,0,2026-09-30,banca múltiple
+B. ICBC,Junin,0,2026-09-30,banca múltiple
+B. ICBC,La Libertad,0,2026-09-30,banca múltiple
+B. ICBC,Lambayeque,0,2026-09-30,banca múltiple
+B. ICBC,Lima,1,2026-09-30,banca múltiple
+B. ICBC,Loreto,0,2026-09-30,banca múltiple
+B. ICBC,Madre de Dios,0,2026-09-30,banca múltiple
+B. ICBC,Moquegua,0,2026-09-30,banca múltiple
+B. ICBC,Pasco,0,2026-09-30,banca múltiple
+B. ICBC,Piura,0,2026-09-30,banca múltiple
+B. ICBC,Puno,0,2026-09-30,banca múltiple
+B. ICBC,San Martin,0,2026-09-30,banca múltiple
+B. ICBC,Tacna,0,2026-09-30,banca múltiple
+B. ICBC,Tumbes,0,2026-09-30,banca múltiple
+B. ICBC,Ucayali,0,2026-09-30,banca múltiple
+Bank of China,Amazonas,0,2026-09-30,banca múltiple
+Bank of China,Ancash,0,2026-09-30,banca múltiple
+Bank of China,Apurimac,0,2026-09-30,banca múltiple
+Bank of China,Arequipa,0,2026-09-30,banca múltiple
+Bank of China,Ayacucho,0,2026-09-30,banca múltiple
+Bank of China,Cajamarca,0,2026-09-30,banca múltiple
+Bank of China,Callao,0,2026-09-30,banca múltiple
+Bank of China,Cusco,0,2026-09-30,banca múltiple
+Bank of China,Huancavelica,0,2026-09-30,banca múltiple
+Bank of China,Huanuco,0,2026-09-30,banca múltiple
+Bank of China,Ica,0,2026-09-30,banca múltiple
+Bank of China,Junin,0,2026-09-30,banca múltiple
+Bank of China,La Libertad,0,2026-09-30,banca múltiple
+Bank of China,Lambayeque,0,2026-09-30,banca múltiple
+Bank of China,Lima,1,2026-09-30,banca múltiple
+Bank of China,Loreto,0,2026-09-30,banca múltiple
+Bank of China,Madre de Dios,0,2026-09-30,banca múltiple
+Bank of China,Moquegua,0,2026-09-30,banca múltiple
+Bank of China,Pasco,0,2026-09-30,banca múltiple
+Bank of China,Piura,0,2026-09-30,banca múltiple
+Bank of China,Puno,0,2026-09-30,banca múltiple
+Bank of China,San Martin,0,2026-09-30,banca múltiple
+Bank of China,Tacna,0,2026-09-30,banca múltiple
+Bank of China,Tumbes,0,2026-09-30,banca múltiple
+Bank of China,Ucayali,0,2026-09-30,banca múltiple
+Banco BCI Perú,Amazonas,0,2026-09-30,banca múltiple
+Banco BCI Perú,Ancash,0,2026-09-30,banca múltiple
+Banco BCI Perú,Apurimac,0,2026-09-30,banca múltiple
+Banco BCI Perú,Arequipa,0,2026-09-30,banca múltiple
+Banco BCI Perú,Ayacucho,0,2026-09-30,banca múltiple
+Banco BCI Perú,Cajamarca,0,2026-09-30,banca múltiple
+Banco BCI Perú,Callao,0,2026-09-30,banca múltiple
+Banco BCI Perú,Cusco,0,2026-09-30,banca múltiple
+Banco BCI Perú,Huancavelica,0,2026-09-30,banca múltiple
+Banco BCI Perú,Huanuco,0,2026-09-30,banca múltiple
+Banco BCI Perú,Ica,0,2026-09-30,banca múltiple
+Banco BCI Perú,Junin,0,2026-09-30,banca múltiple
+Banco BCI Perú,La Libertad,0,2026-09-30,banca múltiple
+Banco BCI Perú,Lambayeque,0,2026-09-30,banca múltiple
+Banco BCI Perú,Lima,1,2026-09-30,banca múltiple
+Banco BCI Perú,Loreto,0,2026-09-30,banca múltiple
+Banco BCI Perú,Madre de Dios,0,2026-09-30,banca múltiple
+Banco BCI Perú,Moquegua,0,2026-09-30,banca múltiple
+Banco BCI Perú,Pasco,0,2026-09-30,banca múltiple
+Banco BCI Perú,Piura,0,2026-09-30,banca múltiple
+Banco BCI Perú,Puno,0,2026-09-30,banca múltiple
+Banco BCI Perú,San Martin,0,2026-09-30,banca múltiple
+Banco BCI Perú,Tacna,0,2026-09-30,banca múltiple
+Banco BCI Perú,Tumbes,0,2026-09-30,banca múltiple
+Banco BCI Perú,Ucayali,0,2026-09-30,banca múltiple
+B. Efectiva,Amazonas,2,2026-09-30,banca múltiple
+B. Efectiva,Ancash,6,2026-09-30,banca múltiple
+B. Efectiva,Apurimac,3,2026-09-30,banca múltiple
+B. Efectiva,Arequipa,7,2026-09-30,banca múltiple
+B. Efectiva,Ayacucho,3,2026-09-30,banca múltiple
+B. Efectiva,Cajamarca,10,2026-09-30,banca múltiple
+B. Efectiva,Callao,2,2026-09-30,banca múltiple
+B. Efectiva,Cusco,4,2026-09-30,banca múltiple
+B. Efectiva,Huancavelica,1,2026-09-30,banca múltiple
+B. Efectiva,Huanuco,6,2026-09-30,banca múltiple
+B. Efectiva,Ica,9,2026-09-30,banca múltiple
+B. Efectiva,Junin,10,2026-09-30,banca múltiple
+B. Efectiva,La Libertad,14,2026-09-30,banca múltiple
+B. Efectiva,Lambayeque,7,2026-09-30,banca múltiple
+B. Efectiva,Lima,42,2026-09-30,banca múltiple
+B. Efectiva,Loreto,9,2026-09-30,banca múltiple
+B. Efectiva,Madre de Dios,4,2026-09-30,banca múltiple
+B. Efectiva,Moquegua,2,2026-09-30,banca múltiple
+B. Efectiva,Pasco,1,2026-09-30,banca múltiple
+B. Efectiva,Piura,16,2026-09-30,banca múltiple
+B. Efectiva,Puno,3,2026-09-30,banca múltiple
+B. Efectiva,San Martin,9,2026-09-30,banca múltiple
+B. Efectiva,Tacna,1,2026-09-30,banca múltiple
+B. Efectiva,Tumbes,3,2026-09-30,banca múltiple
+B. Efectiva,Ucayali,3,2026-09-30,banca múltiple
+Compartamos Banco,Amazonas,2,2026-09-30,banca múltiple
+Compartamos Banco,Ancash,5,2026-09-30,banca múltiple
+Compartamos Banco,Apurimac,1,2026-09-30,banca múltiple
+Compartamos Banco,Arequipa,13,2026-09-30,banca múltiple
+Compartamos Banco,Ayacucho,1,2026-09-30,banca múltiple
+Compartamos Banco,Cajamarca,6,2026-09-30,banca múltiple
+Compartamos Banco,Callao,4,2026-09-30,banca múltiple
+Compartamos Banco,Cusco,2,2026-09-30,banca múltiple
+Compartamos Banco,Huancavelica,0,2026-09-30,banca múltiple
+Compartamos Banco,Huanuco,2,2026-09-30,banca múltiple
+Compartamos Banco,Ica,5,2026-09-30,banca múltiple
+Compartamos Banco,Junin,3,2026-09-30,banca múltiple
+Compartamos Banco,La Libertad,10,2026-09-30,banca múltiple
+Compartamos Banco,Lambayeque,8,2026-09-30,banca múltiple
+Compartamos Banco,Lima,37,2026-09-30,banca múltiple
+Compartamos Banco,Loreto,3,2026-09-30,banca múltiple
+Compartamos Banco,Madre de Dios,1,2026-09-30,banca múltiple
+Compartamos Banco,Moquegua,2,2026-09-30,banca múltiple
+Compartamos Banco,Pasco,0,2026-09-30,banca múltiple
+Compartamos Banco,Piura,14,2026-09-30,banca múltiple
+Compartamos Banco,Puno,2,2026-09-30,banca múltiple
+Compartamos Banco,San Martin,3,2026-09-30,banca múltiple
+Compartamos Banco,Tacna,2,2026-09-30,banca múltiple
+Compartamos Banco,Tumbes,2,2026-09-30,banca múltiple
+Compartamos Banco,Ucayali,2,2026-09-30,banca múltiple
+Santander Consumer Bank,Amazonas,0,2026-09-30,banca múltiple
+Santander Consumer Bank,Ancash,2,2026-09-30,banca múltiple
+Santander Consumer Bank,Apurimac,1,2026-09-30,banca múltiple
+Santander Consumer Bank,Arequipa,5,2026-09-30,banca múltiple
+Santander Consumer Bank,Ayacucho,1,2026-09-30,banca múltiple
+Santander Consumer Bank,Cajamarca,2,2026-09-30,banca múltiple
+Santander Consumer Bank,Callao,3,2026-09-30,banca múltiple
+Santander Consumer Bank,Cusco,1,2026-09-30,banca múltiple
+Santander Consumer Bank,Huancavelica,0,2026-09-30,banca múltiple
+Santander Consumer Bank,Huanuco,3,2026-09-30,banca múltiple
+Santander Consumer Bank,Ica,4,2026-09-30,banca múltiple
+Santander Consumer Bank,Junin,5,2026-09-30,banca múltiple
+Santander Consumer Bank,La Libertad,6,2026-09-30,banca múltiple
+Santander Consumer Bank,Lambayeque,6,2026-09-30,banca múltiple
+Santander Consumer Bank,Lima,51,2026-09-30,banca múltiple
+Santander Consumer Bank,Loreto,3,2026-09-30,banca múltiple
+Santander Consumer Bank,Madre de Dios,1,2026-09-30,banca múltiple
+Santander Consumer Bank,Moquegua,2,2026-09-30,banca múltiple
+Santander Consumer Bank,Pasco,1,2026-09-30,banca múltiple
+Santander Consumer Bank,Piura,8,2026-09-30,banca múltiple
+Santander Consumer Bank,Puno,2,2026-09-30,banca múltiple
+Santander Consumer Bank,San Martin,2,2026-09-30,banca múltiple
+Santander Consumer Bank,Tacna,1,2026-09-30,banca múltiple
+Santander Consumer Bank,Tumbes,2,2026-09-30,banca múltiple
+Santander Consumer Bank,Ucayali,2,2026-09-30,banca múltiple
+CMAC AREQUIPA,Amazonas,2,2026-09-30,caja municipal
+CMAC AREQUIPA,Ancash,3,2026-09-30,caja municipal
+CMAC AREQUIPA,Apurimac,6,2026-09-30,caja municipal
+CMAC AREQUIPA,Arequipa,41,2026-09-30,caja municipal
+CMAC AREQUIPA,Ayacucho,3,2026-09-30,caja municipal
+CMAC AREQUIPA,Cajamarca,8,2026-09-30,caja municipal
+CMAC AREQUIPA,Callao,2,2026-09-30,caja municipal
+CMAC AREQUIPA,Cusco,23,2026-09-30,caja municipal
+CMAC AREQUIPA,Huancavelica,2,2026-09-30,caja municipal
+CMAC AREQUIPA,Huanuco,4,2026-09-30,caja municipal
+CMAC AREQUIPA,Ica,10,2026-09-30,caja municipal
+CMAC AREQUIPA,Junin,10,2026-09-30,caja municipal
+CMAC AREQUIPA,La Libertad,8,2026-09-30,caja municipal
+CMAC AREQUIPA,Lambayeque,3,2026-09-30,caja municipal
+CMAC AREQUIPA,Lima,46,2026-09-30,caja municipal
+CMAC AREQUIPA,Loreto,2,2026-09-30,caja municipal
+CMAC AREQUIPA,Madre de Dios,4,2026-09-30,caja municipal
+CMAC AREQUIPA,Moquegua,6,2026-09-30,caja municipal
+CMAC AREQUIPA,Pasco,2,2026-09-30,caja municipal
+CMAC AREQUIPA,Piura,7,2026-09-30,caja municipal
+CMAC AREQUIPA,Puno,24,2026-09-30,caja municipal
+CMAC AREQUIPA,San Martin,5,2026-09-30,caja municipal
+CMAC AREQUIPA,Tacna,5,2026-09-30,caja municipal
+CMAC AREQUIPA,Tumbes,1,2026-09-30,caja municipal
+CMAC AREQUIPA,Ucayali,3,2026-09-30,caja municipal
+CMAC CUSCO,Amazonas,2,2026-09-30,caja municipal
+CMAC CUSCO,Ancash,2,2026-09-30,caja municipal
+CMAC CUSCO,Apurimac,8,2026-09-30,caja municipal
+CMAC CUSCO,Arequipa,16,2026-09-30,caja municipal
+CMAC CUSCO,Ayacucho,4,2026-09-30,caja municipal
+CMAC CUSCO,Cajamarca,4,2026-09-30,caja municipal
+CMAC CUSCO,Callao,0,2026-09-30,caja municipal
+CMAC CUSCO,Cusco,35,2026-09-30,caja municipal
+CMAC CUSCO,Huancavelica,1,2026-09-30,caja municipal
+CMAC CUSCO,Huanuco,2,2026-09-30,caja municipal
+CMAC CUSCO,Ica,5,2026-09-30,caja municipal
+CMAC CUSCO,Junin,12,2026-09-30,caja municipal
+CMAC CUSCO,La Libertad,5,2026-09-30,caja municipal
+CMAC CUSCO,Lambayeque,3,2026-09-30,caja municipal
+CMAC CUSCO,Lima,21,2026-09-30,caja municipal
+CMAC CUSCO,Loreto,1,2026-09-30,caja municipal
+CMAC CUSCO,Madre de Dios,2,2026-09-30,caja municipal
+CMAC CUSCO,Moquegua,2,2026-09-30,caja municipal
+CMAC CUSCO,Pasco,2,2026-09-30,caja municipal
+CMAC CUSCO,Piura,2,2026-09-30,caja municipal
+CMAC CUSCO,Puno,15,2026-09-30,caja municipal
+CMAC CUSCO,San Martin,2,2026-09-30,caja municipal
+CMAC CUSCO,Tacna,5,2026-09-30,caja municipal
+CMAC CUSCO,Tumbes,1,2026-09-30,caja municipal
+CMAC CUSCO,Ucayali,2,2026-09-30,caja municipal
+CMAC DEL SANTA,Amazonas,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Ancash,7,2026-09-30,caja municipal
+CMAC DEL SANTA,Apurimac,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Arequipa,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Ayacucho,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Cajamarca,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Callao,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Cusco,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Huancavelica,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Huanuco,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Ica,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Junin,0,2026-09-30,caja municipal
+CMAC DEL SANTA,La Libertad,1,2026-09-30,caja municipal
+CMAC DEL SANTA,Lambayeque,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Lima,2,2026-09-30,caja municipal
+CMAC DEL SANTA,Loreto,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Madre de Dios,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Moquegua,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Pasco,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Piura,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Puno,0,2026-09-30,caja municipal
+CMAC DEL SANTA,San Martin,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Tacna,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Tumbes,0,2026-09-30,caja municipal
+CMAC DEL SANTA,Ucayali,0,2026-09-30,caja municipal
+CMAC HUANCAYO,Amazonas,3,2026-09-30,caja municipal
+CMAC HUANCAYO,Ancash,6,2026-09-30,caja municipal
+CMAC HUANCAYO,Apurimac,4,2026-09-30,caja municipal
+CMAC HUANCAYO,Arequipa,5,2026-09-30,caja municipal
+CMAC HUANCAYO,Ayacucho,8,2026-09-30,caja municipal
+CMAC HUANCAYO,Cajamarca,9,2026-09-30,caja municipal
+CMAC HUANCAYO,Callao,3,2026-09-30,caja municipal
+CMAC HUANCAYO,Cusco,13,2026-09-30,caja municipal
+CMAC HUANCAYO,Huancavelica,7,2026-09-30,caja municipal
+CMAC HUANCAYO,Huanuco,10,2026-09-30,caja municipal
+CMAC HUANCAYO,Ica,7,2026-09-30,caja municipal
+CMAC HUANCAYO,Junin,43,2026-09-30,caja municipal
+CMAC HUANCAYO,La Libertad,9,2026-09-30,caja municipal
+CMAC HUANCAYO,Lambayeque,6,2026-09-30,caja municipal
+CMAC HUANCAYO,Lima,80,2026-09-30,caja municipal
+CMAC HUANCAYO,Loreto,6,2026-09-30,caja municipal
+CMAC HUANCAYO,Madre de Dios,2,2026-09-30,caja municipal
+CMAC HUANCAYO,Moquegua,2,2026-09-30,caja municipal
+CMAC HUANCAYO,Pasco,9,2026-09-30,caja municipal
+CMAC HUANCAYO,Piura,8,2026-09-30,caja municipal
+CMAC HUANCAYO,Puno,8,2026-09-30,caja municipal
+CMAC HUANCAYO,San Martin,6,2026-09-30,caja municipal
+CMAC HUANCAYO,Tacna,3,2026-09-30,caja municipal
+CMAC HUANCAYO,Tumbes,2,2026-09-30,caja municipal
+CMAC HUANCAYO,Ucayali,4,2026-09-30,caja municipal
+CMAC ICA,Amazonas,0,2026-09-30,caja municipal
+CMAC ICA,Ancash,0,2026-09-30,caja municipal
+CMAC ICA,Apurimac,5,2026-09-30,caja municipal
+CMAC ICA,Arequipa,8,2026-09-30,caja municipal
+CMAC ICA,Ayacucho,9,2026-09-30,caja municipal
+CMAC ICA,Cajamarca,0,2026-09-30,caja municipal
+CMAC ICA,Callao,0,2026-09-30,caja municipal
+CMAC ICA,Cusco,2,2026-09-30,caja municipal
+CMAC ICA,Huancavelica,1,2026-09-30,caja municipal
+CMAC ICA,Huanuco,0,2026-09-30,caja municipal
+CMAC ICA,Ica,19,2026-09-30,caja municipal
+CMAC ICA,Junin,1,2026-09-30,caja municipal
+CMAC ICA,La Libertad,0,2026-09-30,caja municipal
+CMAC ICA,Lambayeque,0,2026-09-30,caja municipal
+CMAC ICA,Lima,18,2026-09-30,caja municipal
+CMAC ICA,Loreto,0,2026-09-30,caja municipal
+CMAC ICA,Madre de Dios,0,2026-09-30,caja municipal
+CMAC ICA,Moquegua,1,2026-09-30,caja municipal
+CMAC ICA,Pasco,0,2026-09-30,caja municipal
+CMAC ICA,Piura,0,2026-09-30,caja municipal
+CMAC ICA,Puno,0,2026-09-30,caja municipal
+CMAC ICA,San Martin,0,2026-09-30,caja municipal
+CMAC ICA,Tacna,1,2026-09-30,caja municipal
+CMAC ICA,Tumbes,0,2026-09-30,caja municipal
+CMAC ICA,Ucayali,0,2026-09-30,caja municipal
+CMAC MAYNAS,Amazonas,1,2026-09-30,caja municipal
+CMAC MAYNAS,Ancash,0,2026-09-30,caja municipal
+CMAC MAYNAS,Apurimac,0,2026-09-30,caja municipal
+CMAC MAYNAS,Arequipa,0,2026-09-30,caja municipal
+CMAC MAYNAS,Ayacucho,0,2026-09-30,caja municipal
+CMAC MAYNAS,Cajamarca,4,2026-09-30,caja municipal
+CMAC MAYNAS,Callao,1,2026-09-30,caja municipal
+CMAC MAYNAS,Cusco,1,2026-09-30,caja municipal
+CMAC MAYNAS,Huancavelica,0,2026-09-30,caja municipal
+CMAC MAYNAS,Huanuco,3,2026-09-30,caja municipal
+CMAC MAYNAS,Ica,0,2026-09-30,caja municipal
+CMAC MAYNAS,Junin,3,2026-09-30,caja municipal
+CMAC MAYNAS,La Libertad,0,2026-09-30,caja municipal
+CMAC MAYNAS,Lambayeque,0,2026-09-30,caja municipal
+CMAC MAYNAS,Lima,1,2026-09-30,caja municipal
+CMAC MAYNAS,Loreto,7,2026-09-30,caja municipal
+CMAC MAYNAS,Madre de Dios,0,2026-09-30,caja municipal
+CMAC MAYNAS,Moquegua,0,2026-09-30,caja municipal
+CMAC MAYNAS,Pasco,1,2026-09-30,caja municipal
+CMAC MAYNAS,Piura,0,2026-09-30,caja municipal
+CMAC MAYNAS,Puno,0,2026-09-30,caja municipal
+CMAC MAYNAS,San Martin,6,2026-09-30,caja municipal
+CMAC MAYNAS,Tacna,0,2026-09-30,caja municipal
+CMAC MAYNAS,Tumbes,0,2026-09-30,caja municipal
+CMAC MAYNAS,Ucayali,3,2026-09-30,caja municipal
+CMAC PAITA,Amazonas,1,2026-09-30,caja municipal
+CMAC PAITA,Ancash,0,2026-09-30,caja municipal
+CMAC PAITA,Apurimac,0,2026-09-30,caja municipal
+CMAC PAITA,Arequipa,0,2026-09-30,caja municipal
+CMAC PAITA,Ayacucho,0,2026-09-30,caja municipal
+CMAC PAITA,Cajamarca,0,2026-09-30,caja municipal
+CMAC PAITA,Callao,0,2026-09-30,caja municipal
+CMAC PAITA,Cusco,0,2026-09-30,caja municipal
+CMAC PAITA,Huancavelica,0,2026-09-30,caja municipal
+CMAC PAITA,Huanuco,0,2026-09-30,caja municipal
+CMAC PAITA,Ica,0,2026-09-30,caja municipal
+CMAC PAITA,Junin,0,2026-09-30,caja municipal
+CMAC PAITA,La Libertad,1,2026-09-30,caja municipal
+CMAC PAITA,Lambayeque,1,2026-09-30,caja municipal
+CMAC PAITA,Lima,0,2026-09-30,caja municipal
+CMAC PAITA,Loreto,1,2026-09-30,caja municipal
+CMAC PAITA,Madre de Dios,0,2026-09-30,caja municipal
+CMAC PAITA,Moquegua,0,2026-09-30,caja municipal
+CMAC PAITA,Pasco,0,2026-09-30,caja municipal
+CMAC PAITA,Piura,6,2026-09-30,caja municipal
+CMAC PAITA,Puno,0,2026-09-30,caja municipal
+CMAC PAITA,San Martin,2,2026-09-30,caja municipal
+CMAC PAITA,Tacna,0,2026-09-30,caja municipal
+CMAC PAITA,Tumbes,1,2026-09-30,caja municipal
+CMAC PAITA,Ucayali,0,2026-09-30,caja municipal
+CMAC PIURA,Amazonas,8,2026-09-30,caja municipal
+CMAC PIURA,Ancash,4,2026-09-30,caja municipal
+CMAC PIURA,Apurimac,4,2026-09-30,caja municipal
+CMAC PIURA,Arequipa,8,2026-09-30,caja municipal
+CMAC PIURA,Ayacucho,4,2026-09-30,caja municipal
+CMAC PIURA,Cajamarca,17,2026-09-30,caja municipal
+CMAC PIURA,Callao,4,2026-09-30,caja municipal
+CMAC PIURA,Cusco,9,2026-09-30,caja municipal
+CMAC PIURA,Huancavelica,5,2026-09-30,caja municipal
+CMAC PIURA,Huanuco,4,2026-09-30,caja municipal
+CMAC PIURA,Ica,5,2026-09-30,caja municipal
+CMAC PIURA,Junin,10,2026-09-30,caja municipal
+CMAC PIURA,La Libertad,9,2026-09-30,caja municipal
+CMAC PIURA,Lambayeque,14,2026-09-30,caja municipal
+CMAC PIURA,Lima,31,2026-09-30,caja municipal
+CMAC PIURA,Loreto,6,2026-09-30,caja municipal
+CMAC PIURA,Madre de Dios,1,2026-09-30,caja municipal
+CMAC PIURA,Moquegua,2,2026-09-30,caja municipal
+CMAC PIURA,Pasco,3,2026-09-30,caja municipal
+CMAC PIURA,Piura,43,2026-09-30,caja municipal
+CMAC PIURA,Puno,3,2026-09-30,caja municipal
+CMAC PIURA,San Martin,14,2026-09-30,caja municipal
+CMAC PIURA,Tacna,2,2026-09-30,caja municipal
+CMAC PIURA,Tumbes,6,2026-09-30,caja municipal
+CMAC PIURA,Ucayali,6,2026-09-30,caja municipal
+CMAC TACNA,Amazonas,0,2026-09-30,caja municipal
+CMAC TACNA,Ancash,0,2026-09-30,caja municipal
+CMAC TACNA,Apurimac,0,2026-09-30,caja municipal
+CMAC TACNA,Arequipa,5,2026-09-30,caja municipal
+CMAC TACNA,Ayacucho,0,2026-09-30,caja municipal
+CMAC TACNA,Cajamarca,0,2026-09-30,caja municipal
+CMAC TACNA,Callao,0,2026-09-30,caja municipal
+CMAC TACNA,Cusco,2,2026-09-30,caja municipal
+CMAC TACNA,Huancavelica,0,2026-09-30,caja municipal
+CMAC TACNA,Huanuco,0,2026-09-30,caja municipal
+CMAC TACNA,Ica,1,2026-09-30,caja municipal
+CMAC TACNA,Junin,0,2026-09-30,caja municipal
+CMAC TACNA,La Libertad,0,2026-09-30,caja municipal
+CMAC TACNA,Lambayeque,0,2026-09-30,caja municipal
+CMAC TACNA,Lima,4,2026-09-30,caja municipal
+CMAC TACNA,Loreto,0,2026-09-30,caja municipal
+CMAC TACNA,Madre de Dios,5,2026-09-30,caja municipal
+CMAC TACNA,Moquegua,2,2026-09-30,caja municipal
+CMAC TACNA,Pasco,0,2026-09-30,caja municipal
+CMAC TACNA,Piura,0,2026-09-30,caja municipal
+CMAC TACNA,Puno,5,2026-09-30,caja municipal
+CMAC TACNA,San Martin,0,2026-09-30,caja municipal
+CMAC TACNA,Tacna,6,2026-09-30,caja municipal
+CMAC TACNA,Tumbes,0,2026-09-30,caja municipal
+CMAC TACNA,Ucayali,0,2026-09-30,caja municipal
+CMAC TRUJILLO,Amazonas,4,2026-09-30,caja municipal
+CMAC TRUJILLO,Ancash,5,2026-09-30,caja municipal
+CMAC TRUJILLO,Apurimac,2,2026-09-30,caja municipal
+CMAC TRUJILLO,Arequipa,5,2026-09-30,caja municipal
+CMAC TRUJILLO,Ayacucho,2,2026-09-30,caja municipal
+CMAC TRUJILLO,Cajamarca,10,2026-09-30,caja municipal
+CMAC TRUJILLO,Callao,0,2026-09-30,caja municipal
+CMAC TRUJILLO,Cusco,4,2026-09-30,caja municipal
+CMAC TRUJILLO,Huancavelica,0,2026-09-30,caja municipal
+CMAC TRUJILLO,Huanuco,2,2026-09-30,caja municipal
+CMAC TRUJILLO,Ica,2,2026-09-30,caja municipal
+CMAC TRUJILLO,Junin,5,2026-09-30,caja municipal
+CMAC TRUJILLO,La Libertad,24,2026-09-30,caja municipal
+CMAC TRUJILLO,Lambayeque,6,2026-09-30,caja municipal
+CMAC TRUJILLO,Lima,20,2026-09-30,caja municipal
+CMAC TRUJILLO,Loreto,1,2026-09-30,caja municipal
+CMAC TRUJILLO,Madre de Dios,0,2026-09-30,caja municipal
+CMAC TRUJILLO,Moquegua,2,2026-09-30,caja municipal
+CMAC TRUJILLO,Pasco,1,2026-09-30,caja municipal
+CMAC TRUJILLO,Piura,7,2026-09-30,caja municipal
+CMAC TRUJILLO,Puno,3,2026-09-30,caja municipal
+CMAC TRUJILLO,San Martin,3,2026-09-30,caja municipal
+CMAC TRUJILLO,Tacna,0,2026-09-30,caja municipal
+CMAC TRUJILLO,Tumbes,1,2026-09-30,caja municipal
+CMAC TRUJILLO,Ucayali,0,2026-09-30,caja municipal
+CMCP Lima,Amazonas,0,2026-09-30,caja municipal
+CMCP Lima,Ancash,1,2026-09-30,caja municipal
+CMCP Lima,Apurimac,0,2026-09-30,caja municipal
+CMCP Lima,Arequipa,1,2026-09-30,caja municipal
+CMCP Lima,Ayacucho,0,2026-09-30,caja municipal
+CMCP Lima,Cajamarca,1,2026-09-30,caja municipal
+CMCP Lima,Callao,0,2026-09-30,caja municipal
+CMCP Lima,Cusco,1,2026-09-30,caja municipal
+CMCP Lima,Huancavelica,0,2026-09-30,caja municipal
+CMCP Lima,Huanuco,0,2026-09-30,caja municipal
+CMCP Lima,Ica,1,2026-09-30,caja municipal
+CMCP Lima,Junin,1,2026-09-30,caja municipal
+CMCP Lima,La Libertad,1,2026-09-30,caja municipal
+CMCP Lima,Lambayeque,1,2026-09-30,caja municipal
+CMCP Lima,Lima,21,2026-09-30,caja municipal
+CMCP Lima,Loreto,1,2026-09-30,caja municipal
+CMCP Lima,Madre de Dios,0,2026-09-30,caja municipal
+CMCP Lima,Moquegua,0,2026-09-30,caja municipal
+CMCP Lima,Pasco,0,2026-09-30,caja municipal
+CMCP Lima,Piura,3,2026-09-30,caja municipal
+CMCP Lima,Puno,0,2026-09-30,caja municipal
+CMCP Lima,San Martin,1,2026-09-30,caja municipal
+CMCP Lima,Tacna,1,2026-09-30,caja municipal
+CMCP Lima,Tumbes,0,2026-09-30,caja municipal
+CMCP Lima,Ucayali,1,2026-09-30,caja municipal

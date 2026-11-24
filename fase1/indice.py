@@ -102,12 +102,34 @@ def cargar() -> tuple[pd.DataFrame, dict]:
     return df, geo
 
 
-def oferta(df: pd.DataFrame) -> tuple[pd.DataFrame, bool]:
+MANUAL_OFERTA = ROOT / "data" / "manual" / "oferta_distrital.csv"
+
+
+def cargar_oferta() -> pd.DataFrame | None:
+    """Oferta financiera por distrito: parquet procesado o, si no, la plantilla manual llenada por el equipo.
+    En la plantilla, una celda vacía = sin dato; 0 = se verificó que no hay. Los agentes pesan 1/3 de una oficina."""
     path = INTERIM / "oferta_por_distrito.parquet"
-    if not path.exists():
+    if path.exists():
+        return pd.read_parquet(path)[["ubigeo", "puntos_atencion"]]
+    if not MANUAL_OFERTA.exists():
+        return None
+    m = pd.read_csv(MANUAL_OFERTA, dtype={"ubigeo": str}, encoding="utf-8-sig")
+    ofi = [c for c in m.columns if c.startswith("oficinas_")]
+    nums = m[ofi + ["agentes_corresponsales"]].apply(pd.to_numeric, errors="coerce")
+    llenos = nums[ofi].notna().any(axis=1)
+    if llenos.mean() < 0.8:  # con la plantilla a medio llenar, penalizar sería injusto con los distritos vacíos
+        if llenos.any():
+            print(f"Aviso: plantilla de oferta llena en {llenos.sum()}/{len(m)} distritos; se usa cuando llegue al 80 %.")
+        return None
+    m["puntos_atencion"] = nums[ofi].fillna(0).sum(axis=1) + nums["agentes_corresponsales"].fillna(0) / 3
+    return m[["ubigeo", "puntos_atencion"]]
+
+
+def oferta(df: pd.DataFrame) -> tuple[pd.DataFrame, bool]:
+    of = cargar_oferta()
+    if of is None:
         df["factor_oferta"] = 1.0
         return df, False
-    of = pd.read_parquet(path)[["ubigeo", "puntos_atencion"]]
     df = df.merge(of, on="ubigeo", how="left")
     df["puntos_x1000"] = 1000 * df["puntos_atencion"].fillna(0) / df["pob_18_64"]
     df["factor_oferta"] = 1 - PENALIDAD_OFERTA_MAX * pct(df["puntos_x1000"])
@@ -215,7 +237,7 @@ def mapa(df: pd.DataFrame, geo: dict, alpha: float, cupo_agro: float, con_oferta
             feats.append({"type": "Feature", "geometry": f["geometry"], "properties": {"ubigeo": f["properties"]["IDDIST"], **p}})
     data = json.dumps({"type": "FeatureCollection", "features": feats}, ensure_ascii=False)
     html = MAPA_HTML.replace("__LEAFLET__", leaflet()).replace("__DATA__", data).replace("__ALPHA__", f"{alpha:.2f} · cupo agro {cupo_agro:.0%}").replace("__VERSION__", VERSION).replace(
-        "__OFERTA__", "incluida" if con_oferta else "pendiente (sin datos SBS)")
+        "__OFERTA__", "incluida" if con_oferta else "pendiente (sin datos por distrito)")
     (OUT / f"mapa_indice_{VERSION}.html").write_text(html, encoding="utf-8")
 
 
@@ -247,7 +269,7 @@ def main() -> int:
     reporte(df, args.alpha, args.cupo_agro, args.top, con_oferta)
     mapa(df, geo, args.alpha, args.cupo_agro, con_oferta)
 
-    print(f"alpha={args.alpha}  cupo agro={args.cupo_agro:.0%}  oferta SBS: {'sí' if con_oferta else 'NO (pendiente)'}\n")
+    print(f"alpha={args.alpha}  cupo agro={args.cupo_agro:.0%}  oferta distrital: {'sí' if con_oferta else 'NO (pendiente: data/manual/oferta_distrital.csv)'}\n")
     print(df[["puesto", "distrito", "provincia", "segmento", "score", "pct_en_top"]].head(args.top).to_string(index=False))
     print(f"\n-> salidas/ranking_{VERSION}.csv, salidas/reporte_indice_{VERSION}.md, salidas/mapa_indice_{VERSION}.html")
     return 0
@@ -255,7 +277,7 @@ def main() -> int:
 
 def reporte(df: pd.DataFrame, alpha: float, cupo_agro: float, top: int, con_oferta: bool) -> None:
     L = [f"# Índice de oportunidad {VERSION} — La Libertad", "",
-         f"alpha (peso de VOLUMEN) = **{alpha}** · cupo agro = **{cupo_agro:.0%}** · oferta financiera SBS: **{'incluida' if con_oferta else 'pendiente'}** · "
+         f"alpha (peso de VOLUMEN) = **{alpha}** · cupo agro = **{cupo_agro:.0%}** · oferta financiera por distrito: **{'incluida' if con_oferta else 'pendiente'}** · "
          f"{len(df)} distritos", "",
          "## Cómo se calcula", "",
          "Cada variable se convierte a percentil dentro de La Libertad (0 a 1) y se pondera:", "",
@@ -281,7 +303,7 @@ def reporte(df: pd.DataFrame, alpha: float, cupo_agro: float, top: int, con_ofer
           "- El padrón RUC reducido solo trae ubigeo para personas jurídicas (RUC 20); las personas naturales "
           "con negocio (RUC 10) casi nunca lo tienen. `ruc_activos_habidos` mide **empresas formales**, no microempresarios.",
           "- CENAMA es de 2016 y CENAGRO de 2012: la estructura es estable, pero los montos pueden haber cambiado.",
-          "- Sin datos SBS el índice no sabe dónde ya hay agencias/agentes: puede priorizar zonas ya atendidas.",
+          "- Sin oferta por distrito (la SBS solo publica oficinas por departamento) el índice no sabe dónde ya hay agencias/agentes: puede priorizar zonas ya atendidas.",
           "- Es un índice de priorización territorial, no evalúa a personas ni su riesgo crediticio.",
           "- Alto Trujillo (130112) no tiene polígono en el mapa base: aparece en el ranking pero no en el mapa."]
     (OUT / f"reporte_indice_{VERSION}.md").write_text("\n".join(L) + "\n", encoding="utf-8")
@@ -310,7 +332,7 @@ __LEAFLET__
 </style></head><body>
 <div class="wrap"><div id="map"></div><aside>
 <h1>Índice de oportunidad __VERSION__ · La Libertad</h1>
-<div class="sub">α = __ALPHA__ · oferta SBS: __OFERTA__ · datos públicos (SUNAT, RENIEC, CENAMA, CENAGRO)</div>
+<div class="sub">α = __ALPHA__ · oferta: __OFERTA__ · datos públicos (SUNAT, RENIEC, CENAMA, CENAGRO)</div>
 <div class="tabs"><button data-k="score" class="on">Final</button><button data-k="score_volumen">Volumen</button><button data-k="score_intensidad">Intensidad</button></div>
 <ol id="list"></ol></aside></div>
 <script>

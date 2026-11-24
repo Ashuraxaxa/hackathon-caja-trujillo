@@ -3,4 +3,4 @@ data/interim/*.parquet
 data/interim/*.geojson
 __pycache__/
 *.part
-/.vs/hackathon-caja-trujillo.slnx/FileContentIndex
+.vs/

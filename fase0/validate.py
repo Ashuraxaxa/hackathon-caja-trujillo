@@ -170,6 +170,71 @@ def cenama() -> pd.DataFrame:
     return dist
 
 
+# ---------------------------------------------------------------- CENAGRO
+CENAGRO_KEYS = ["P001", "P002", "P003", "P007X", "P008", "NPRIN"]
+P096_BARRERA = {2: "tramites", 3: "intereses", 4: "sin_oferta", 5: "garantia", 6: "deudas", 7: "autoexclusion"}
+
+
+def _cenagro_csv(z: zipfile.ZipFile, modulo: str, cols: list[str]) -> pd.DataFrame:
+    """Lee el módulo (p. ej. 'REC01') de cada departamento piloto, sin descomprimir a disco."""
+    parts = []
+    for name in z.namelist():
+        if not name.endswith(f"_IVCENAGRO_{modulo}.csv"):
+            continue
+        with z.open(name) as fh:
+            head = pd.read_csv(fh, nrows=1, dtype=str, encoding="utf-8-sig")
+        if head["P001"].iloc[0].zfill(2) not in DEPARTAMENTOS_PILOTO:
+            continue
+        with z.open(name) as fh:
+            parts.append(pd.read_csv(fh, usecols=cols, dtype={c: str for c in CENAGRO_KEYS},
+                                     encoding="utf-8-sig", low_memory=False))
+    return pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(columns=cols)
+
+
+def cenagro(ubigeos_geo: set[str]) -> pd.DataFrame:
+    print("\n== CENAGRO 2012 (productores agropecuarios y acceso a crédito)")
+    with zipfile.ZipFile(RAW / SOURCES["cenagro"]["dest"]) as z:
+        ua = _cenagro_csv(z, "REC01", CENAGRO_KEYS + ["RESULTADO", "WSUP01", "WSUP03", "LONG_DECI", "LAT_DECI"])
+        cr = _cenagro_csv(z, "REC04B", CENAGRO_KEYS + ["P090", "P092", "P093_05", "P095", "P096"])
+    check("cenagro", "unidades agropecuarias en ámbito piloto", len(ua) > 1000, f"{len(ua):,} UA")
+    check("cenagro", "módulo de crédito presente", len(cr) > 1000, f"{len(cr):,} registros")
+    df = ua.merge(cr, on=CENAGRO_KEYS, how="left", validate="one_to_one")
+    df["ubigeo"] = df["P001"].str.zfill(2) + df["P002"].str.zfill(2) + df["P003"].str.zfill(2)
+    match = df["P090"].notna().mean()
+    check("cenagro", "UA con respuesta de crédito", match > 0.9, f"{match:.1%}")
+
+    df["pequeno"] = df["WSUP01"] <= 6  # menos de 5 ha
+    df["gestiono"] = df["P090"] == 1
+    df["obtuvo"] = df["P092"] == 1
+    df["rechazado"] = df["gestiono"] & (df["P092"] == 2)
+    df["obtuvo_cmac"] = df["P093_05"] == 1
+    df["barrera"] = df["P096"].map(P096_BARRERA)
+    df["excluido"] = df["barrera"].notna() | df["rechazado"]  # quería/necesitaba crédito y no accedió
+    ok_coord = df["LAT_DECI"].between(-19, 0) & df["LONG_DECI"].between(-82, -68)
+    check("cenagro", "coordenadas válidas (centroide SEA)", ok_coord.mean() > 0.95, f"{ok_coord.mean():.1%}")
+    df.drop(columns=["P001", "P002", "P003"]).to_parquet(OUT / "cenagro_ua_piloto.parquet", index=False)
+
+    dist = df.groupby("ubigeo").agg(
+        productores=("NPRIN", "size"), productores_pequenos=("pequeno", "sum"),
+        prod_gestionaron_credito=("gestiono", "sum"), prod_obtuvieron_credito=("obtuvo", "sum"),
+        prod_credito_cmac=("obtuvo_cmac", "sum"), prod_excluidos=("excluido", "sum"),
+        prod_sin_oferta=("barrera", lambda s: (s == "sin_oferta").sum()),
+    ).reset_index()
+    dist["tasa_exclusion_agro"] = (dist["prod_excluidos"] / dist["productores"]).round(3)
+    check("cenagro", "productores con crédito (ámbito)", True,
+          f"{dist['prod_obtuvieron_credito'].sum() / dist['productores'].sum():.1%} obtuvieron; "
+          f"{dist['prod_excluidos'].sum() / dist['productores'].sum():.1%} excluidos (barrera o rechazo)")
+    sin_geo = set(dist["ubigeo"]) - ubigeos_geo
+    check("cenagro", "ubigeos casan con polígonos", len(sin_geo) <= 5, f"{len(sin_geo)} sin polígono: {sorted(sin_geo)[:8]}",
+          blocking=False)
+    dist.to_parquet(OUT / "agro_por_distrito.parquet", index=False)
+    notes.append("CENAGRO es de 2012: refleja la estructura agraria (estable) más que la oferta financiera actual. "
+                 "'Excluido' = no pidió crédito por una barrera (trámites, intereses, falta de oferta o de garantía, "
+                 "deudas, creer que no se lo darían) o lo pidió y se lo negaron. Las coordenadas son del centroide "
+                 "del sector de empadronamiento (SEA), no de la chacra.")
+    return dist
+
+
 # ---------------------------------------------------------------- opcionales / manuales
 def opcionales() -> None:
     print("\n== Fuentes opcionales y manuales")
@@ -189,13 +254,15 @@ def main() -> int:
     ruc = sunat(ubigeos)
     pob = reniec(ubigeos)
     mer = cenama()
+    agro = cenagro(ubigeos)
     opcionales()
 
     print("\n== Tabla base por distrito")
     base = (pd.DataFrame({"ubigeo": sorted(ubigeos | set(pob["ubigeo"]))})
               .merge(pob, on="ubigeo", how="left").merge(ruc, on="ubigeo", how="left")
-              .merge(mer, on="ubigeo", how="left"))
-    base[["mercados", "puestos_mercado"]] = base[["mercados", "puestos_mercado"]].fillna(0)
+              .merge(mer, on="ubigeo", how="left").merge(agro, on="ubigeo", how="left"))
+    cnt = ["mercados", "puestos_mercado"] + [c for c in agro.columns if c.startswith("prod")]
+    base[cnt] = base[cnt].fillna(0)
     base["tiene_poligono"] = base["ubigeo"].isin(ubigeos)
     base["ruc_activos_x1000_adultos"] = (1000 * base["ruc_activos_habidos"] / base["pob_18_64"]).round(1)
     check("base", "todos los distritos tienen población", base["pob"].notna().all(),

@@ -11,6 +11,7 @@
 | cenama_mercados | 323,939 | `8dc418779a1d` | 2026-11-24T18:52:11 |
 | cenama_diccionario | 1,863 | `0a195767f194` | 2026-11-24T18:52:12 |
 | limites_distritales | 1,871,306 | `1eba0da33464` | 2026-11-24T18:50:57 |
+| cenagro | 762,514,301 | `122a8a822823` | 2026-11-24T21:11:26 |
 
 ## Chequeos
 
@@ -34,6 +35,12 @@
 | reniec | ubigeos casan con polígonos | ✅ 1 sin polígono: ['130112'] |
 | cenama | filas > 2 000 | ✅ 2,612 mercados |
 | cenama | mercados en ámbito piloto | ✅ 160 mercados, 17,705 puestos funcionando |
+| cenagro | unidades agropecuarias en ámbito piloto | ✅ 130,181 UA |
+| cenagro | módulo de crédito presente | ✅ 127,279 registros |
+| cenagro | UA con respuesta de crédito | ✅ 97.8% |
+| cenagro | coordenadas válidas (centroide SEA) | ✅ 100.0% |
+| cenagro | productores con crédito (ámbito) | ✅ 5.4% obtuvieron; 55.4% excluidos (barrera o rechazo) |
+| cenagro | ubigeos casan con polígonos | ✅ 0 sin polígono: [] |
 | osm_peru | presente | ✅ ⚠ pendiente (optional): https://download.geofabrik.de/south-america/peru-latest.osm.pbf |
 | sbs_oficinas | presente | ✅ ⚠ pendiente (manual): Abrir la URL en el navegador > Estadísticas por departamento/distrito > 'Número de oficinas' y 'Puntos de atención' (último mes). Guardar los Excel en data/raw/sbs/. |
 | pcm_tipologia | presente | ✅ ⚠ pendiente (manual): El archivo está en Google Drive: abrir el dataset, botón 'Ir al recurso', descargar y guardar en data/raw/pcm/. |
@@ -45,6 +52,7 @@
 - Los límites (juaneladio/peru-geojson) tienen 1 834 distritos; hoy existen ~1 890. Los distritos creados después no tienen polígono: se reportan abajo como 'sin polígono'.
 - Padrón RUC: estados 'BAJA' y 'NUM. INTERNO IDENTIF' no son negocios operando; para señales de actividad usar solo activo_habido. No trae actividad económica (CIIU) ni coordenadas: la geolocalización fina requiere geocodificar la dirección (Fase 2).
 - CENAMA es de 2016 y no trae coordenadas: sirve a nivel distrito, no hexágono.
+- CENAGRO es de 2012: refleja la estructura agraria (estable) más que la oferta financiera actual. 'Excluido' = no pidió crédito por una barrera (trámites, intereses, falta de oferta o de garantía, deudas, creer que no se lo darían) o lo pidió y se lo negaron. Las coordenadas son del centroide del sector de empadronamiento (SEA), no de la chacra.
 
 ## Vista rápida: 15 distritos más poblados (18-64)
 

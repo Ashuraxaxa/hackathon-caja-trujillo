@@ -62,3 +62,21 @@ limitaciones) y `mapa_indice_v1.html` (se abre con doble clic y funciona sin int
   por tercil de densidad.
 
 Agenda para la sesión con el owner: [`docs/agenda_owner.md`](docs/agenda_owner.md).
+
+# Fase 2 — Zonas y rutas de asesores itinerantes (agro)
+
+```bash
+python fase2/rutas_agro.py                       # 2 asesores por agencia, 8 semanas
+python fase2/rutas_agro.py --asesores 3 --semanas 12 --visitas-dia 12 --cobertura 0.25
+```
+
+- Toma los distritos **agro** del top-15 sin agencia de Caja Trujillo (hoy Julcán, Chugay, Usquil, Sartimbamba, Salpo
+  y Agallpampa) y los asigna a la agencia más cercana (Otuzco y Huamachuco).
+- Agrupa a los productores del CENAGRO en hexágonos H3 (≈ 5 km²) según el centroide de su sector censal. Cada hexágono
+  trae los productores excluidos del crédito, su barrera principal y un **mensaje comercial sugerido**.
+- Arma **circuitos** de hasta una semana, ordena la visita y estima el viaje de ida (supuestos: carretera ≈ 2,5 × línea
+  recta, 25 km/h). Si la ida pasa de 1,5 h, el circuito necesita **base de campo** (pernocte, agencia móvil o agente).
+- Calendariza los circuitos entre los asesores y calcula cuántos harían falta para cubrir todas las zonas.
+
+Salidas: `salidas/resumen_asesores.csv` (cobertura por agencia), `circuitos_asesores.csv`, `rutas_asesores.csv`
+(orden de visita), `zonas_agro.csv` (hexágonos) y `mapa_rutas_agro.html`.

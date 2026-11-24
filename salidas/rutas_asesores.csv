@@ -1,0 +1,231 @@
+﻿hub,circuito,orden,hex,distrito,lat,lng,excluidos,productores,mensaje_sugerido
+HUAMACHUCO,HUA-01,1,878f5cd9cffffff,CHUGAY,-7.77855,-77.86001,301,344,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-02,1,878f5cd91ffffff,CHUGAY,-7.76454,-77.87959,85,92,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-02,2,878f5cd82ffffff,CHUGAY,-7.75472,-77.85768,190,202,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-03,1,878f5cd83ffffff,CHUGAY,-7.76873,-77.8381,182,229,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-03,2,878f5cd81ffffff,CHUGAY,-7.75891,-77.8162,125,129,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-04,1,878f51a5dffffff,SARTIMBAMBA,-7.62576,-77.82411,174,198,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-04,2,878f51a4effffff,SARTIMBAMBA,-7.61595,-77.80221,125,140,Presencia: visita periódica fija y agente cercano
+HUAMACHUCO,HUA-05,1,878f5ccb4ffffff,CHUGAY,-7.83604,-77.8866,150,179,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-05,2,878f5cd9bffffff,CHUGAY,-7.82621,-77.86468,32,133,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-05,3,878f5ccb5ffffff,CHUGAY,-7.85005,-77.86702,104,186,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-06,1,878f5cd98ffffff,CHUGAY,-7.80238,-77.86235,81,81,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-06,2,878f5cd9dffffff,CHUGAY,-7.79256,-77.84044,146,181,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-06,3,878f5cd99ffffff,CHUGAY,-7.81639,-77.84277,91,103,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-07,1,878f5cdacffffff,SARTIMBAMBA,-7.71543,-77.77006,143,157,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-07,2,878f5cd13ffffff,SARTIMBAMBA,-7.70561,-77.74817,77,105,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-07,3,878f5cd12ffffff,SARTIMBAMBA,-7.69161,-77.76774,92,108,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-07,4,878f5cdadffffff,SARTIMBAMBA,-7.72944,-77.7505,13,22,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-08,1,878f51a48ffffff,SARTIMBAMBA,-7.62995,-77.78265,130,161,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-08,2,878f51a4dffffff,SARTIMBAMBA,-7.62014,-77.76076,143,190,"Educación financiera: 'sí califica', requisitos simples"
+HUAMACHUCO,HUA-08,3,878f5cd36ffffff,SARTIMBAMBA,-7.61032,-77.73887,92,101,"Educación financiera: 'sí califica', requisitos simples"
+HUAMACHUCO,HUA-09,1,878f5cd95ffffff,CHUGAY,-7.74071,-77.87725,34,40,Evaluación en campo y desembolso rápido (asesor lleva todo)
+HUAMACHUCO,HUA-09,2,878f5cd86ffffff,CHUGAY,-7.73089,-77.85534,134,181,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-10,1,878f5cda8ffffff,SARTIMBAMBA,-7.73926,-77.77239,99,121,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-10,2,878f5cd1affffff,SARTIMBAMBA,-7.74344,-77.73093,129,136,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-10,3,878f5cd1cffffff,SARTIMBAMBA,-7.70979,-77.70671,81,100,Presencia: visita periódica fija y agente cercano
+HUAMACHUCO,HUA-11,1,878f5cca2ffffff,CHUGAY,-7.86406,-77.84744,72,96,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-11,2,878f5cca0ffffff,CHUGAY,-7.85423,-77.82553,128,145,Reprogramación / compra de deuda
+HUAMACHUCO,HUA-11,3,878f5cca5ffffff,CHUGAY,-7.8444,-77.80362,72,72,"Educación financiera: 'sí califica', requisitos simples"
+HUAMACHUCO,HUA-12,1,878f5136dffffff,CHUGAY,-7.79819,-77.90384,17,37,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-12,2,878f5cd9effffff,CHUGAY,-7.78837,-77.88192,125,133,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-12,3,878f5cd9affffff,CHUGAY,-7.8122,-77.88426,106,169,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-13,1,878f5ccb1ffffff,CHUGAY,-7.87388,-77.86936,48,48,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-13,2,878f5cc84ffffff,CHUGAY,-7.88789,-77.84978,122,131,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-13,3,878f5cca3ffffff,CHUGAY,-7.87806,-77.82786,70,82,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-13,4,878f5cc85ffffff,CHUGAY,-7.9019,-77.83019,46,46,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-14,1,878f51a5cffffff,SARTIMBAMBA,-7.61175,-77.84367,113,115,Presencia: visita periódica fija y agente cercano
+HUAMACHUCO,HUA-14,2,878f51a42ffffff,SARTIMBAMBA,-7.58793,-77.84134,51,60,"Educación financiera: 'sí califica', requisitos simples"
+HUAMACHUCO,HUA-14,3,878f51a40ffffff,SARTIMBAMBA,-7.57812,-77.81944,84,85,"Educación financiera: 'sí califica', requisitos simples"
+HUAMACHUCO,HUA-15,1,878f5cce4ffffff,CHUGAY,-7.9284,-77.68615,98,109,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-15,2,878f5cce1ffffff,CHUGAY,-7.96622,-77.66889,111,112,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-16,1,878f51a71ffffff,SARTIMBAMBA,-7.54028,-77.83667,106,147,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-17,1,878f5cdb5ffffff,CHUGAY,-7.68323,-77.85067,105,108,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-17,2,878f51a59ffffff,CHUGAY,-7.64959,-77.82644,89,113,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-18,1,878f5cda4ffffff,CHUGAY,-7.6636,-77.80687,101,108,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-18,2,878f5cda5ffffff,CHUGAY,-7.6776,-77.7873,81,135,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-18,3,878f5cd16ffffff,SARTIMBAMBA,-7.66778,-77.76541,69,84,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-19,1,878f51a41ffffff,SARTIMBAMBA,-7.59212,-77.79988,57,100,Presencia: visita periódica fija y agente cercano
+HUAMACHUCO,HUA-19,2,878f51a6bffffff,SARTIMBAMBA,-7.59632,-77.75843,97,111,"Educación financiera: 'sí califica', requisitos simples"
+HUAMACHUCO,HUA-19,3,878f51a6dffffff,SARTIMBAMBA,-7.56268,-77.73422,60,61,Presencia: visita periódica fija y agente cercano
+HUAMACHUCO,HUA-20,1,878f51a60ffffff,SARTIMBAMBA,-7.52066,-77.79289,84,100,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-20,2,878f42692ffffff,SARTIMBAMBA,-7.52486,-77.75145,96,115,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-21,1,878f5cd14ffffff,SARTIMBAMBA,-7.65796,-77.74352,93,97,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-21,2,878f5cd06ffffff,SARTIMBAMBA,-7.66215,-77.70207,29,37,Presencia: visita periódica fija y agente cercano
+HUAMACHUCO,HUA-21,3,878f5cd30ffffff,SARTIMBAMBA,-7.62432,-77.71931,80,87,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-22,1,878f5cc11ffffff,CHUGAY,-7.86258,-77.74256,74,82,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-22,2,878f5cc1cffffff,CHUGAY,-7.87658,-77.72298,86,88,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+HUAMACHUCO,HUA-23,1,878f5ccaeffffff,CHUGAY,-7.89207,-77.80828,78,158,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-23,2,878f5ccadffffff,CHUGAY,-7.89624,-77.76679,1,1,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-24,1,878f5cc1bffffff,CHUGAY,-7.92424,-77.72763,76,78,Crédito sin garantía real (grupal / con aval) para pequeño productor
+HUAMACHUCO,HUA-25,1,878f5cd88ffffff,CHUGAY,-7.79674,-77.79895,71,108,"Educación financiera: 'sí califica', requisitos simples"
+HUAMACHUCO,HUA-26,1,878f51a45ffffff,SARTIMBAMBA,-7.5683,-77.79755,65,70,Presencia: visita periódica fija y agente cercano
+HUAMACHUCO,HUA-27,1,878f5cda3ffffff,CHUGAY,-7.71125,-77.81153,64,144,Presencia: visita periódica fija y agente cercano
+HUAMACHUCO,HUA-28,1,878f5cca6ffffff,CHUGAY,-7.84022,-77.84511,61,195,"Educación financiera: 'sí califica', requisitos simples"
+HUAMACHUCO,HUA-29,1,878f5cd03ffffff,SARTIMBAMBA,-7.69997,-77.68482,47,51,Presencia: visita periódica fija y agente cercano
+HUAMACHUCO,HUA-30,1,878f5cc10ffffff,CHUGAY,-7.84858,-77.76213,40,90,"Educación financiera: 'sí califica', requisitos simples"
+HUAMACHUCO,HUA-31,1,878f51369ffffff,CHUGAY,-7.82203,-77.90618,12,111,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-01,1,878f51761ffffff,USQUIL,-7.80932,-78.38729,273,363,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-02,1,878f5176effffff,USQUIL,-7.83317,-78.38967,239,484,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-02,2,878f5176cffffff,USQUIL,-7.82336,-78.3677,161,230,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-03,1,878f5164affffff,JULCAN,-8.08155,-78.43546,185,197,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-03,2,878f51648ffffff,JULCAN,-8.07173,-78.41348,57,75,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-04,1,878f51643ffffff,JULCAN,-8.04364,-78.45269,184,218,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-04,2,878f51641ffffff,JULCAN,-8.03383,-78.4307,60,142,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-05,1,878f51629ffffff,AGALLPAMPA,-7.92991,-78.50433,180,221,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-05,2,878f5175affffff,AGALLPAMPA,-7.9201,-78.48234,80,87,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-06,1,878f5174dffffff,USQUIL,-7.89492,-78.37483,80,92,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-06,2,878f512b6ffffff,USQUIL,-7.88511,-78.35286,177,233,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-06,3,878f512b4ffffff,USQUIL,-7.8753,-78.33089,61,67,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-07,1,878f5165effffff,JULCAN,-8.06327,-78.49667,163,235,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-07,2,878f5165cffffff,JULCAN,-8.05346,-78.47468,172,243,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-08,1,878f51658ffffff,JULCAN,-8.07732,-78.47707,71,85,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-08,2,878f5165affffff,JULCAN,-8.08713,-78.49906,162,192,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-08,3,878f516e9ffffff,JULCAN,-8.09695,-78.52106,55,76,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-09,1,878f51674ffffff,AGALLPAMPA,-7.94396,-78.48473,158,162,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-09,2,878f5175bffffff,AGALLPAMPA,-7.93415,-78.46275,108,120,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-10,1,878f51740ffffff,USQUIL,-7.85278,-78.43361,156,269,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-10,2,878f51745ffffff,USQUIL,-7.84297,-78.41164,90,185,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-11,1,878f51765ffffff,USQUIL,-7.78547,-78.38491,47,66,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-11,2,878f51396ffffff,USQUIL,-7.77566,-78.36295,141,150,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-11,3,878f51394ffffff,USQUIL,-7.76586,-78.34098,70,89,Evaluación en campo y desembolso rápido (asesor lleva todo)
+OTUZCO,OTU-12,1,878f5165bffffff,JULCAN,-8.10118,-78.47945,139,176,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-12,2,878f51659ffffff,JULCAN,-8.09137,-78.45746,42,78,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-12,3,878f5e9b4ffffff,JULCAN,-8.111,-78.50145,131,169,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-13,1,878f5160dffffff,AGALLPAMPA,-7.96358,-78.52871,56,129,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-13,2,878f51676ffffff,AGALLPAMPA,-7.95377,-78.50672,136,191,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-13,3,878f51670ffffff,AGALLPAMPA,-7.96782,-78.48712,48,77,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-14,1,878f516e4ffffff,SALPO,-8.00706,-78.5751,94,183,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-14,2,878f516e6ffffff,SALPO,-8.01686,-78.5971,131,207,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-14,3,878f516f5ffffff,SALPO,-8.02667,-78.6191,86,110,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-15,1,878f512b2ffffff,USQUIL,-7.90896,-78.35524,73,77,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-15,2,878f512b0ffffff,USQUIL,-7.89915,-78.33327,61,71,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-15,3,878f512b3ffffff,USQUIL,-7.923,-78.33564,129,133,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-16,1,878f516a9ffffff,SALPO,-7.99855,-78.65832,51,124,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-16,2,878f516abffffff,SALPO,-8.00835,-78.68033,124,132,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-16,3,878f5168cffffff,SALPO,-8.01816,-78.70234,35,70,"Educación financiera: 'sí califica', requisitos simples"
+OTUZCO,OTU-16,4,878f516f6ffffff,SALPO,-8.02242,-78.66072,46,54,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-17,1,878f51650ffffff,JULCAN,-8.02535,-78.51389,63,92,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-17,2,878f51651ffffff,JULCAN,-8.03941,-78.49428,116,168,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-17,3,878f51653ffffff,JULCAN,-8.04922,-78.51628,123,250,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-18,1,878f5165dffffff,JULCAN,-8.0675,-78.45507,123,137,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-18,2,878f5164effffff,JULCAN,-8.05769,-78.43308,95,100,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-18,3,878f5e9a4ffffff,JULCAN,-8.10541,-78.43785,32,80,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-19,1,878f5162affffff,AGALLPAMPA,-7.92566,-78.54592,49,56,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-19,2,878f5162bffffff,AGALLPAMPA,-7.93972,-78.52632,122,225,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-19,3,878f5160cffffff,AGALLPAMPA,-7.94952,-78.54831,80,95,Reprogramación / compra de deuda
+OTUZCO,OTU-20,1,878f5160affffff,SALPO,-7.98319,-78.5727,56,113,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-20,2,878f51619ffffff,SALPO,-7.993,-78.5947,121,147,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-20,3,878f5161bffffff,SALPO,-8.0028,-78.6167,57,99,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-20,4,878f51618ffffff,SALPO,-7.97894,-78.61431,24,85,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-21,1,878f51655ffffff,JULCAN,-8.01554,-78.49189,77,104,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-21,2,878f51646ffffff,JULCAN,-8.00573,-78.4699,35,55,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-21,3,878f51644ffffff,JULCAN,-7.99592,-78.44792,16,19,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-21,4,878f51642ffffff,JULCAN,-8.02959,-78.47229,121,162,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-22,1,878f516e1ffffff,SALPO,-8.04498,-78.55788,117,143,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-22,2,878f516e3ffffff,SALPO,-8.05479,-78.57989,119,205,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-22,3,878f516c4ffffff,SALPO,-8.06459,-78.60189,48,57,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-23,1,878f51751ffffff,USQUIL,-7.87239,-78.47757,79,142,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-23,2,878f51742ffffff,USQUIL,-7.86258,-78.45559,115,149,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-23,3,878f51743ffffff,USQUIL,-7.87663,-78.436,52,76,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-24,1,878f5e9a6ffffff,JULCAN,-8.11523,-78.45984,114,142,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-24,2,878f5e9b5ffffff,JULCAN,-8.12505,-78.48184,34,38,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-24,3,878f5e9a0ffffff,JULCAN,-8.12927,-78.44023,17,25,Presencia: visita periódica fija y agente cercano
+OTUZCO,OTU-25,1,878f51762ffffff,USQUIL,-7.80507,-78.42885,110,215,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-25,2,878f51760ffffff,USQUIL,-7.79527,-78.40688,65,133,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-25,3,878f51763ffffff,USQUIL,-7.81912,-78.40926,82,224,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-26,1,878f51609ffffff,AGALLPAMPA,-7.98744,-78.5311,106,179,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-26,2,878f51672ffffff,AGALLPAMPA,-7.97763,-78.50911,55,127,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-26,3,878f5160bffffff,AGALLPAMPA,-7.99725,-78.5531,84,190,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-27,1,878f516e5ffffff,SALPO,-8.02111,-78.55549,37,58,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-27,2,878f516e0ffffff,SALPO,-8.03092,-78.57749,100,126,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-27,3,878f516e2ffffff,SALPO,-8.04073,-78.5995,48,77,"Educación financiera: 'sí califica', requisitos simples"
+OTUZCO,OTU-27,4,878f516eeffffff,SALPO,-8.06884,-78.56028,56,57,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-28,1,878f516f3ffffff,SALPO,-8.06034,-78.64351,63,102,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-28,2,878f516d4ffffff,SALPO,-8.07015,-78.66552,52,102,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-28,3,878f516d5ffffff,SALPO,-8.08421,-78.64591,98,147,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-28,4,878f516c6ffffff,SALPO,-8.0744,-78.6239,12,20,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-28,5,878f516d0ffffff,SALPO,-8.09402,-78.66793,24,64,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-29,1,878f51392ffffff,USQUIL,-7.79951,-78.36532,94,203,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-29,2,878f51393ffffff,USQUIL,-7.81355,-78.34573,97,113,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-29,3,878f51391ffffff,USQUIL,-7.80375,-78.32377,70,76,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-29,4,878f5139effffff,USQUIL,-7.8276,-78.32615,71,73,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-30,1,878f5174cffffff,AGALLPAMPA,-7.88087,-78.39443,16,19,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-30,2,878f5176bffffff,USQUIL,-7.87107,-78.37245,95,202,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-30,3,878f51769ffffff,USQUIL,-7.86126,-78.35049,85,126,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-30,4,878f5176affffff,USQUIL,-7.85702,-78.39205,47,129,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-31,1,878f51768ffffff,USQUIL,-7.84721,-78.37008,69,185,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-31,2,878f5176dffffff,USQUIL,-7.83741,-78.34811,91,132,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-31,3,878f5139affffff,USQUIL,-7.85145,-78.32852,13,14,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-32,1,878f516edffffff,JULCAN,-8.07308,-78.51867,90,100,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-33,1,878f51645ffffff,JULCAN,-8.00997,-78.42831,87,101,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-33,2,878f5166affffff,JULCAN,-8.02401,-78.40871,73,94,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-33,3,878f51668ffffff,JULCAN,-8.0142,-78.38673,40,46,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-33,4,878f5166bffffff,JULCAN,-8.03806,-78.38911,16,19,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-33,5,878f5164cffffff,JULCAN,-8.04787,-78.41109,89,107,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-34,1,878f5175effffff,USQUIL,-7.89625,-78.47996,89,102,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-34,2,878f5175cffffff,USQUIL,-7.88644,-78.45798,38,69,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-34,3,878f5175dffffff,AGALLPAMPA,-7.90049,-78.43838,58,69,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-34,4,878f51758ffffff,AGALLPAMPA,-7.9103,-78.46036,57,61,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-35,1,878f51601ffffff,AGALLPAMPA,-7.93547,-78.56791,55,92,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-35,2,878f51603ffffff,AGALLPAMPA,-7.94527,-78.58991,29,43,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-35,3,878f5161cffffff,AGALLPAMPA,-7.95508,-78.61191,4,7,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-35,4,878f5161dffffff,AGALLPAMPA,-7.96914,-78.59231,18,31,Presencia: visita periódica fija y agente cercano
+OTUZCO,OTU-35,5,878f5160effffff,AGALLPAMPA,-7.95933,-78.57031,80,133,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-35,6,878f51608ffffff,AGALLPAMPA,-7.97339,-78.5507,24,112,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-36,1,878f510ebffffff,USQUIL,-7.70412,-78.35582,38,45,"Educación financiera: 'sí califica', requisitos simples"
+OTUZCO,OTU-36,2,878f513b4ffffff,USQUIL,-7.70836,-78.31428,76,96,Presencia: visita periódica fija y agente cercano
+OTUZCO,OTU-36,3,878f513b5ffffff,USQUIL,-7.7224,-78.2947,54,71,Presencia: visita periódica fija y agente cercano
+OTUZCO,OTU-37,1,878f51395ffffff,USQUIL,-7.7799,-78.3214,41,70,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-37,2,878f51382ffffff,USQUIL,-7.79394,-78.30181,7,10,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-37,3,878f51380ffffff,USQUIL,-7.78413,-78.27986,74,82,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-37,4,878f51384ffffff,USQUIL,-7.76029,-78.27749,55,88,Evaluación en campo y desembolso rápido (asesor lleva todo)
+OTUZCO,OTU-37,5,878f51383ffffff,USQUIL,-7.80798,-78.28222,31,32,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-38,1,878f510d8ffffff,USQUIL,-7.74332,-78.44367,10,17,"Educación financiera: 'sí califica', requisitos simples"
+OTUZCO,OTU-38,2,878f510deffffff,USQUIL,-7.72927,-78.46326,35,63,"Educación financiera: 'sí califica', requisitos simples"
+OTUZCO,OTU-38,3,878f510dcffffff,USQUIL,-7.71947,-78.44129,72,108,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-38,4,878f510c3ffffff,USQUIL,-7.70967,-78.41933,56,91,"Educación financiera: 'sí califica', requisitos simples"
+OTUZCO,OTU-39,1,878f51744ffffff,USQUIL,-7.82893,-78.43123,70,145,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-39,2,878f51741ffffff,AGALLPAMPA,-7.86683,-78.41402,63,82,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-39,3,878f51775ffffff,USQUIL,-7.79102,-78.44844,16,22,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-40,1,878f510cdffffff,USQUIL,-7.72796,-78.35819,45,71,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-40,2,878f510eaffffff,USQUIL,-7.69007,-78.3754,69,82,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-40,3,878f510e8ffffff,USQUIL,-7.68027,-78.35344,69,100,Evaluación en campo y desembolso rápido (asesor lleva todo)
+OTUZCO,OTU-41,1,878f5139bffffff,USQUIL,-7.86549,-78.30893,57,89,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-41,2,878f51399ffffff,USQUIL,-7.85568,-78.28697,47,65,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-41,3,878f5138affffff,USQUIL,-7.84587,-78.26501,26,56,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-41,4,878f5139dffffff,USQUIL,-7.83183,-78.2846,63,150,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-41,5,878f512a4ffffff,USQUIL,-7.86971,-78.26738,16,20,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-42,1,878f51764ffffff,USQUIL,-7.77142,-78.4045,6,45,Evaluación en campo y desembolso rápido (asesor lleva todo)
+OTUZCO,OTU-42,2,878f510cbffffff,USQUIL,-7.76162,-78.38253,32,68,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-42,3,878f510caffffff,USQUIL,-7.74757,-78.40212,17,44,Presencia: visita periódica fija y agente cercano
+OTUZCO,OTU-42,4,878f510c8ffffff,USQUIL,-7.73777,-78.38016,61,68,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-43,1,878f51390ffffff,USQUIL,-7.78971,-78.34336,61,83,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-44,1,878f51755ffffff,USQUIL,-7.84853,-78.47519,58,85,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-45,1,878f51673ffffff,AGALLPAMPA,-7.99168,-78.48951,56,99,Reprogramación / compra de deuda
+OTUZCO,OTU-45,2,878f51671ffffff,AGALLPAMPA,-7.98187,-78.46752,2,41,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-46,1,878f516f4ffffff,SALPO,-8.01261,-78.63871,7,29,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-46,2,878f516f0ffffff,SALPO,-8.03648,-78.64111,15,37,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-46,3,878f516f2ffffff,SALPO,-8.04628,-78.66312,21,28,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-46,4,878f516f1ffffff,SALPO,-8.05054,-78.6215,53,129,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-47,1,878f51664ffffff,AGALLPAMPA,-7.93839,-78.42117,2,34,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-47,2,878f51296ffffff,AGALLPAMPA,-7.94263,-78.37959,8,63,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-47,3,878f51661ffffff,AGALLPAMPA,-7.9763,-78.40395,51,113,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-47,4,878f51663ffffff,AGALLPAMPA,-7.98611,-78.42593,6,60,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-48,1,878f51759ffffff,AGALLPAMPA,-7.92435,-78.44076,3,23,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-48,2,878f5174affffff,AGALLPAMPA,-7.91454,-78.41878,11,47,"Educación financiera: 'sí califica', requisitos simples"
+OTUZCO,OTU-48,3,878f5174effffff,AGALLPAMPA,-7.89068,-78.4164,46,47,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-49,1,878f51656ffffff,AGALLPAMPA,-8.0113,-78.53349,45,56,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-50,1,878f5e9b3ffffff,JULCAN,-8.15873,-78.50623,43,45,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-50,2,878f5e986ffffff,JULCAN,-8.17278,-78.48662,35,37,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-51,1,878f5161affffff,SALPO,-7.98874,-78.63631,37,40,Presencia: visita periódica fija y agente cercano
+OTUZCO,OTU-51,2,878f516a8ffffff,SALPO,-7.98449,-78.67792,3,47,Evaluación en campo y desembolso rápido (asesor lleva todo)
+OTUZCO,OTU-52,1,878f51669ffffff,JULCAN,-8.02824,-78.36713,34,34,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-53,1,878f510dbffffff,USQUIL,-7.76717,-78.44606,19,86,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-53,2,878f51766ffffff,USQUIL,-7.78122,-78.42647,33,38,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-54,1,878f512b5ffffff,USQUIL,-7.88934,-78.3113,31,44,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-55,1,878f51689ffffff,SALPO,-8.05609,-78.68513,4,30,Crédito sin garantía real (grupal / con aval) para pequeño productor
+OTUZCO,OTU-55,2,878f516d6ffffff,SALPO,-8.07996,-78.68754,15,36,"Educación financiera: 'sí califica', requisitos simples"
+OTUZCO,OTU-56,1,878f51749ffffff,AGALLPAMPA,-7.91877,-78.37721,7,58,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-57,1,878f51666ffffff,AGALLPAMPA,-7.9482,-78.44315,7,31,Tasa competitiva y cuota fija: comparar con prestamista/habilitador
+OTUZCO,OTU-58,1,878f5168dffffff,SALPO,-8.03222,-78.68273,5,21,"Educación financiera: 'sí califica', requisitos simples"

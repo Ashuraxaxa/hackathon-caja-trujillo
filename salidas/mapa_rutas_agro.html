@@ -697,7 +697,10 @@ const vals = D.hex.features.map(f=>f.properties.excluidos).sort((a,b)=>a-b);
 const br = [1,2,3,4,5].map(i=>vals[Math.floor(i*vals.length/6)]);
 const col = x => colors[br.filter(b=>x>=b).length];
 const map = L.map("map");
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{attribution:"© OpenStreetMap © CARTO",maxZoom:18}).addTo(map);
+// Fondos sin clave de API: Esri gris claro (por defecto) y OpenStreetMap como alternativa.
+const fondoEsri = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",{attribution:"Fondo © Esri, HERE, Garmin, © OpenStreetMap",maxZoom:16}).addTo(map);
+const fondoOSM = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>",maxZoom:19});
+L.control.layers({"Gris claro (Esri)":fondoEsri,"OpenStreetMap":fondoOSM},null,{position:"topright"}).addTo(map);
 L.geoJSON(D.limites,{style:{fill:false,color:"#555",weight:1.2,dashArray:"4 3"}}).addTo(map);
 const hexL = L.geoJSON(D.hex,{style:f=>({fillColor:col(f.properties.excluidos),weight:.5,color:"#666",fillOpacity:.75}),
   onEachFeature:(f,l)=>{const p=f.properties;l.bindPopup(`<b>${p.distrito}</b> · hub ${p.hub}<br>Productores: ${p.productores} (${p.pequenos} &lt;5 ha)<br>Excluidos del crédito: <b>${p.excluidos}</b><br>Barrera principal: ${p.barrera||"—"} ${p.barrera?`(${Math.round(p.pct_barrera*100)}%)`:""}<br><i>${p.mensaje||""}</i><br>${p.circuito?`Circuito ${p.circuito}`:""}`);}}).addTo(map);

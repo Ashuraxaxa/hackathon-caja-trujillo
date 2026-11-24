@@ -394,7 +394,10 @@ const data = __DATA__;
 const colors = ["#f1eef6","#d0d1e6","#a6bddb","#74a9cf","#2b8cbe","#045a8d"];
 let key = "score";
 const map = L.map("map").setView([-7.9,-78.6], 8);
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{attribution:"© OpenStreetMap © CARTO",maxZoom:18}).addTo(map);
+// Fondos sin clave de API: Esri gris claro (por defecto) y OpenStreetMap como alternativa.
+const fondoEsri = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",{attribution:"Fondo © Esri, HERE, Garmin, © OpenStreetMap",maxZoom:16}).addTo(map);
+const fondoOSM = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>",maxZoom:19});
+L.control.layers({"Gris claro (Esri)":fondoEsri,"OpenStreetMap":fondoOSM},null,{position:"topright"}).addTo(map);
 function breaks(){const v=data.features.map(f=>f.properties[key]).sort((a,b)=>a-b);return [1,2,3,4,5].map(i=>v[Math.floor(i*v.length/6)]);}
 let br = breaks();
 const col = x => colors[br.filter(b=>x>=b).length];

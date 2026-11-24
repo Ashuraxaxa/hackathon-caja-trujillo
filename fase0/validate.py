@@ -20,6 +20,9 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).parent))
 from sources import DEPARTAMENTOS_PILOTO, SOURCES  # noqa: E402
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 OUT = ROOT / "data" / "interim"
@@ -43,7 +46,7 @@ def in_piloto(ubigeo: pd.Series) -> pd.Series:
 # ---------------------------------------------------------------- límites
 def limites() -> set[str]:
     print("\n== Límites distritales")
-    gj = json.loads((RAW / SOURCES["limites_distritales"]["dest"]).read_text())
+    gj = json.loads((RAW / SOURCES["limites_distritales"]["dest"]).read_text(encoding="utf-8"))
     feats = gj["features"]
     check("limites", "features > 1800", len(feats) > 1800, f"{len(feats)} distritos en el país")
     piloto = [f for f in feats if f["properties"]["IDDPTO"] in DEPARTAMENTOS_PILOTO]
@@ -52,7 +55,8 @@ def limites() -> set[str]:
     bad_geom = [f["properties"]["IDDIST"] for f in piloto if not f.get("geometry")]
     check("limites", "todas las geometrías presentes", not bad_geom, f"{len(bad_geom)} sin geometría")
     (OUT / "limites_piloto.geojson").write_text(
-        json.dumps({"type": "FeatureCollection", "features": piloto}, ensure_ascii=False)
+        json.dumps({"type": "FeatureCollection", "features": piloto}, ensure_ascii=False),
+        encoding="utf-8",
     )
     notes.append(
         "Los límites (juaneladio/peru-geojson) tienen 1 834 distritos; hoy existen ~1 890. "
@@ -208,7 +212,7 @@ def main() -> int:
 
 
 def write_report(base: pd.DataFrame, fails: list) -> None:
-    manifest = json.loads((RAW / "manifest.json").read_text()) if (RAW / "manifest.json").exists() else {}
+    manifest = json.loads((RAW / "manifest.json").read_text(encoding="utf-8")) if (RAW / "manifest.json").exists() else {}
     lines = ["# Reporte Fase 0 — calidad de datos públicos", "",
              f"Ámbito piloto: departamentos {', '.join(DEPARTAMENTOS_PILOTO)}  ·  "
              f"{len(base)} distritos  ·  {'sin fallas bloqueantes' if not fails else f'{len(fails)} fallas bloqueantes'}", "",
@@ -223,7 +227,7 @@ def write_report(base: pd.DataFrame, fails: list) -> None:
               "| ubigeo | pob 18-64 | RUC activos | RUC/1000 adultos | mercados |", "|---|---:|---:|---:|---:|"]
     lines += [f"| {r.ubigeo} | {r.pob_18_64:,.0f} | {r.ruc_activos_habidos:,.0f} | {r.ruc_activos_x1000_adultos} | {r.mercados:.0f} |"
               for r in top.itertuples()]
-    (OUT / "reporte_fase0.md").write_text("\n".join(lines) + "\n")
+    (OUT / "reporte_fase0.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

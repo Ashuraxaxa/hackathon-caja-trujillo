@@ -21,6 +21,9 @@ import requests
 sys.path.insert(0, str(Path(__file__).parent))
 from sources import SOURCES  # noqa: E402
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 MANIFEST = RAW / "manifest.json"
@@ -74,7 +77,7 @@ def fetch(url: str, dest: Path, retries: int = 5) -> None:
 def main(argv: list[str]) -> int:
     force = "--force" in argv
     wanted = [a for a in argv if not a.startswith("--")] or list(SOURCES)
-    manifest = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {}
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {}
     failures = []
 
     for key in wanted:
@@ -104,7 +107,7 @@ def main(argv: list[str]) -> int:
         }
 
     RAW.mkdir(parents=True, exist_ok=True)
-    MANIFEST.write_text(json.dumps(manifest, indent=2, ensure_ascii=False))
+    MANIFEST.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\nManifest: {MANIFEST.relative_to(ROOT)}")
     if failures:
         print(f"Fallaron fuentes obligatorias: {', '.join(failures)}")

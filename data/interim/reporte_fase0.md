@@ -6,12 +6,13 @@
 
 | fuente | bytes | sha256 (12) | fecha |
 |---|---:|---|---|
-| sunat_ruc | 395,550,127 | `faa05df253ea` | 2026-11-24T18:51:35 |
-| reniec_poblacion | 144,296,957 | `ea1d300da3c6` | 2026-11-24T18:53:07 |
-| cenama_mercados | 323,939 | `8dc418779a1d` | 2026-11-24T18:52:11 |
-| cenama_diccionario | 1,863 | `0a195767f194` | 2026-11-24T18:52:12 |
-| limites_distritales | 1,871,306 | `1eba0da33464` | 2026-11-24T18:50:57 |
-| cenagro | 762,514,301 | `122a8a822823` | 2026-11-24T21:11:26 |
+| sunat_ruc | 395,550,127 | `faa05df253ea` | 2026-11-24T15:13:06 |
+| reniec_poblacion | 144,296,957 | `ea1d300da3c6` | 2026-11-24T15:13:20 |
+| cenama_mercados | 323,939 | `8dc418779a1d` | 2026-11-24T15:13:21 |
+| cenama_diccionario | 1,863 | `0a195767f194` | 2026-11-24T15:13:22 |
+| limites_distritales | 1,871,306 | `1eba0da33464` | 2026-11-24T15:13:22 |
+| osm_peru | 258,280,015 | `4452f694b54a` | 2026-11-24T15:15:47 |
+| cenagro | 762,514,301 | `122a8a822823` | 2026-11-24T16:28:33 |
 
 ## Chequeos
 
@@ -41,7 +42,7 @@
 | cenagro | coordenadas válidas (centroide SEA) | ✅ 100.0% |
 | cenagro | productores con crédito (ámbito) | ✅ 5.4% obtuvieron; 55.4% excluidos (barrera o rechazo) |
 | cenagro | ubigeos casan con polígonos | ✅ 0 sin polígono: [] |
-| osm_peru | presente | ✅ ⚠ pendiente (optional): https://download.geofabrik.de/south-america/peru-latest.osm.pbf |
+| osm_peru | presente | ✅ listo |
 | sbs_oficinas | presente | ✅ ⚠ pendiente (manual): Abrir la URL en el navegador > Estadísticas por departamento/distrito > 'Número de oficinas' y 'Puntos de atención' (último mes). Guardar los Excel en data/raw/sbs/. |
 | pcm_tipologia | presente | ✅ ⚠ pendiente (manual): El archivo está en Google Drive: abrir el dataset, botón 'Ir al recurso', descargar y guardar en data/raw/pcm/. |
 | base | todos los distritos tienen población | ✅ 0 sin dato RENIEC |

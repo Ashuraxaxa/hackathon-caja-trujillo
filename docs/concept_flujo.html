@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>RadarCT · flujo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;600&family=Space+Mono:wght@700&display=swap">
+<style>
+  :root{--bg:#0B0B0B;--ink:#F2F2F2;--muted:#BDBDBD;--card:#161616;--line:#3A3A3A;--red:#F5220F;--blue:#3987E5}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;width:1600px;height:900px;position:relative;overflow:hidden}
+  .tag{position:absolute;left:56px;top:40px;font-family:'Space Mono',monospace;font-size:15px;letter-spacing:2px;background:#1E1E1E;padding:5px 12px}
+  h1{position:absolute;left:56px;top:78px;margin:0;font-family:'Chakra Petch',Arial,sans-serif;font-size:42px;letter-spacing:-1px}
+  h1 span{background:var(--red);color:#fff;padding:0 12px}
+  .legend{position:absolute;right:56px;top:48px;display:flex;gap:24px;font-size:15px;color:var(--muted)}
+  .legend i{display:inline-block;width:28px;height:16px;vertical-align:-3px;margin-right:8px}
+  .box{position:absolute;background:var(--card);border:2px solid var(--line);padding:14px 16px}
+  .box.new{border:2px dashed var(--red)}
+  .box h3{margin:0 0 6px;font-family:'Chakra Petch',Arial,sans-serif;font-size:21px;line-height:1.15}
+  .box p{margin:0;font-size:14.5px;line-height:1.4;color:var(--muted)}
+  .lab{position:absolute;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:1.5px;color:var(--red)}
+  .who{position:absolute;font-family:'Space Mono',monospace;font-size:13px;background:#1E1E1E;padding:3px 10px;color:var(--ink)}
+  svg{position:absolute;left:0;top:0}
+  .foot{position:absolute;left:56px;bottom:28px;font-size:14px;color:#8C8C8C;font-family:'Space Mono',monospace}
+</style></head><body>
+<div class="tag">CONCEPT SOLUTION · CAJATHON</div>
+<h1>RadarCT: del <span>dato público</span> a la visita del asesor</h1>
+<div class="legend"><span><i style="border:2px solid #3A3A3A;background:#161616"></i>Ya construido</span><span><i style="border:2px dashed #F5220F"></i>Se construye en el hackathon</span></div>
+
+<svg width="1600" height="900" viewBox="0 0 1600 900" aria-hidden="true">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#BDBDBD"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#F5220F"/></marker></defs>
+  <g stroke="#BDBDBD" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M326 300H360"/><path d="M630 300H664"/><path d="M934 300H968"/><path d="M1238 300H1272"/>
+    <path d="M1150 392V466"/>
+    <path d="M900 392V556"/>
+    <path d="M1100 655H962"/>
+    <path d="M640 655H604"/>
+  </g>
+  <g stroke="#F5220F" stroke-width="2" fill="none" stroke-dasharray="6 5" marker-end="url(#r)">
+    <path d="M330 720H200V430H720V398"/>
+  </g>
+</svg>
+
+<p class="lab" style="left:56px;top:178px">1 · ENTRA</p>
+<div class="box" style="left:56px;top:208px;width:270px;height:184px"><h3>Fuentes públicas</h3><p>RENIEC · SUNAT (RUC) · CENAGRO · CENAMA · límites INEI · SBS · webs de agencias (Caja y competencia). Datos internos agregados: opcional.</p></div>
+<p class="lab" style="left:360px;top:178px">2 · PROCESA</p>
+<div class="box" style="left:360px;top:208px;width:270px;height:184px"><h3>Pipeline y validación</h3><p>Descarga, chequeos de calidad y tabla base por distrito; zonas H3 de ~5 km² con exclusión y barrera.</p></div>
+<div class="box" style="left:664px;top:208px;width:270px;height:184px"><h3>Índice por segmento</h3><p>Urbano y agro, volumen y brecha; estabilidad (1 000 simulaciones) y auditoría de sesgo.</p></div>
+<div class="box" style="left:968px;top:208px;width:270px;height:184px"><h3>Zonas y circuitos</h3><p>Rutas de hasta una semana, horas de viaje, mensaje por barrera y asesores necesarios.</p></div>
+<div class="box" style="left:1272px;top:208px;width:272px;height:184px"><h3>Simulación</h3><p>Convencional frente a RadarCT con datos sintéticos y supuestos explícitos.</p></div>
+
+<p class="lab" style="left:640px;top:530px">3 · DECIDE Y ACTÚA</p>
+<div class="box new" style="left:640px;top:560px;width:322px;height:190px"><h3>Panel de gestión comercial</h3><p>Mapa y ranking con perillas en vivo (α, cupo agro, competencia); zonas sin agencia; asigna circuitos.</p></div>
+<p class="who" style="left:640px;top:760px">GESTIÓN COMERCIAL</p>
+<div class="box new" style="left:1100px;top:470px;width:444px;height:280px"><h3>App del asesor (web móvil)</h3><p>"Mi semana": circuito, zonas en el mapa, orden de visita y mensaje sugerido por zona.<br><br>Registro de visita: consentimiento sí/no y resultado (prospecto, solicitud, primer crédito). Funciona sin conexión y sincroniza.</p></div>
+<p class="who" style="left:1100px;top:760px">ASESOR DE NEGOCIOS · USUARIO PRINCIPAL</p>
+<div class="box new" style="left:330px;top:560px;width:274px;height:190px"><h3>Tablero de KPI</h3><p>Clientes nuevos con primer crédito, consentimientos y nuevos en el sistema, frente al método convencional.</p></div>
+<p class="lab" style="left:206px;top:440px">4 · APRENDE: LAS VISITAS RECALIBRAN LA PRIORIDAD</p>
+
+<p class="foot">Sin datos personales ni scoring de crédito · los prospectos se registran con consentimiento · cambia de región con un parámetro</p>
+</body></html>

@@ -183,3 +183,33 @@ Todos los datos que pedimos son **agregados y anonimizados**, sin nombres ni doc
 | **Productos para el segmento agro** | Condiciones del crédito agro y grupal vigente (montos, garantías requeridas, plazos) | Afinar el mensaje sugerido según la barrera de cada zona (falta de garantía, intereses altos) | Mensajes alineados con lo que la Caja realmente puede ofrecer |
 
 Con los dos primeros insumos podríamos además hacer una **validación retrospectiva**: verificar si las zonas que RadarCT habría priorizado hace un año son las que más clientes nuevos dieron después. Eso complementaría la simulación con datos sintéticos.
+
+---
+
+## Desarrollos tecnológicos preexistentes *
+
+Elegir en cada desplegable la opción más cercana a la sugerida.
+
+| # | Tipo (sugerido) | Nombre | Nivel | Titularidad |
+|---|---|---|---|---|
+| 1 | Automatización / integración de datos | Pipeline de datos públicos territoriales | Prototipo funcional | Propia del equipo |
+| 2 | Modelo analítico | Índice de oportunidad por segmento y mapa interactivo | Prototipo funcional | Propia del equipo |
+| 3 | Automatización (extracción de datos) | Relevamiento de redes de agencias | Prototipo funcional | Propia del equipo |
+| 4 | Módulo / algoritmo | Zonificación H3 y planificador de circuitos de asesores | Prototipo funcional | Propia del equipo |
+| 5 | Modelo de simulación | Simulador de prospección con datos sintéticos | Prototipo funcional | Propia del equipo |
+
+## Describan los desarrollos tecnológicos preexistentes *
+
+Contamos con cinco componentes propios, desarrollados por el equipo en Python, que hoy funcionan como scripts de línea de comandos sobre datos públicos de La Libertad. Durante el hackathon construiremos encima de ellos la capa de producto (app del asesor, panel de gestión comercial, API, ciclo de aprendizaje y tablero de KPI).
+
+1. **Pipeline de datos públicos territoriales.** Operativo: descarga y valida 7 fuentes públicas (RENIEC, padrón RUC de SUNAT, CENAGRO, CENAMA, límites distritales, SBS y redes de agencias), con reanudación de descargas, huella SHA-256 y un reporte de calidad; genera la tabla base por distrito. Uso en la propuesta: alimenta todos los demás módulos y permite cambiar de región con un parámetro.
+2. **Índice de oportunidad por segmento y mapa interactivo.** Operativo: calcula el índice urbano/agro con parámetros de negocio (peso volumen/brecha, cupo agro, peso de la competencia), su estabilidad con 1 000 simulaciones, la auditoría de sesgo urbano/rural, las zonas sin agencia propia y un mapa HTML. Uso: es el motor del panel de gestión comercial que construiremos.
+3. **Relevamiento de redes de agencias.** Operativo: lee las agencias publicadas por Caja Trujillo y cinco competidores (Mibanco, Efectiva y las cajas Arequipa, Del Santa y Paita) desde sus páginas y documentos públicos, y las asigna a distritos. Uso: presencia propia y de la competencia en el índice.
+4. **Zonificación H3 y planificador de circuitos.** Operativo: divide los distritos agro priorizados en hexágonos de ~5 km² con productores excluidos y su barrera principal; arma circuitos semanales con orden de visita, horas de viaje, mensaje sugerido y número de asesores necesarios. Uso: genera el plan de la semana que verá el asesor en la app.
+5. **Simulador de prospección con datos sintéticos.** Operativo: compara la prospección convencional con la propuesta con la misma capacidad de asesores, en 1 000 corridas con supuestos variables, y genera prospectos sintéticos (no personas reales). Uso: tablero de KPI y sustento cuantitativo del impacto.
+
+**Titularidad y licencias.** Los cinco componentes son de titularidad del equipo. Usan librerías de código abierto de terceros bajo licencias permisivas: pandas y numpy (BSD-3, NumFOCUS y colaboradores), pyarrow (Apache 2.0, Apache Software Foundation), h3 (Apache 2.0, Uber Technologies), Leaflet (BSD-2, Volodymyr Agafonkin y colaboradores), requests (Apache 2.0), pypdf (BSD-3), openpyxl (MIT) y xlrd (BSD). Los datos provienen de fuentes públicas del Estado peruano (INEI, RENIEC, SUNAT, PRODUCE, SBS) y se citan; las redes de agencias se toman solo de páginas y documentos públicos de cada entidad. Los mapas usan fondos de Esri con atribución (uso de desarrollo; en producción, cuenta ArcGIS) y datos de OpenStreetMap (ODbL). No incluyen datos personales.
+
+## Enlace de referencia (opcional)
+
+Repositorio del equipo en GitHub (hoy **privado**: para incluirlo, hacerlo público o dar acceso a los evaluadores; si no, dejar el campo vacío).

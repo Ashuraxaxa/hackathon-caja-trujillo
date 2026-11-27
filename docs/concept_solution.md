@@ -166,3 +166,20 @@ Marcar **"No requerimos datos ni insumos"** y **"Requerimiento deseable de datos
 
 - **Autónomo:** construimos y validamos el prototipo con fuentes públicas y datos sintéticos generados por nosotros.
 - **Deseable (enriquece y valida mejor, no es indispensable):** clientes nuevos o colocaciones agregadas por distrito o agencia; tasas históricas de conversión de la prospección; coordenadas de las agencias de la Caja; y cualquier dato agregado de prospección de los asesores. Siempre agregado y sin datos personales.
+
+---
+
+## ¿Cómo contribuirían estos datos e insumos a mejorar su solución? *
+
+Todos los datos que pedimos son **agregados y anonimizados**, sin nombres ni documentos de identidad, y en cualquier formato tabular (Excel o CSV). Si la Caja no puede compartirlos, el prototipo funciona igual con fuentes públicas y datos sintéticos.
+
+| Dato e insumo | Características | Para qué lo usaríamos | Qué mejora |
+|---|---|---|---|
+| **Clientes nuevos con primer crédito por distrito** | Conteo mensual de los últimos 12–24 meses, por distrito y segmento (urbano/agro o tipo de crédito) | Calibrar los pesos del índice: comparar las zonas que el índice prioriza con donde la Caja realmente captó | Pasa de pesos expertos a pesos ajustados con evidencia; permite medir el acierto del índice en zonas ya conocidas |
+| **Tasas de la prospección** | Por agencia o distrito: visitas, prospectos con consentimiento, solicitudes y créditos desembolsados | Reemplazar los supuestos de la simulación (consentimiento 25–45 %, conversión 4–10 %) por valores observados | La estimación de impacto deja de depender de rangos supuestos y se acota |
+| **Coordenadas y cobertura de las agencias** | Latitud y longitud de las 24 agencias de La Libertad y el área que atiende cada una (distritos o caseríos) | Ubicar con precisión el punto de salida de los asesores y confirmar el distrito de 5 agencias que asignamos por dirección | Distancias, horas de viaje y circuitos más exactos; la "agencia más cercana" deja de ser aproximada |
+| **Capacidad comercial** | Número de asesores por agencia, jornadas de campo y metas de captación vigentes | Dimensionar los circuitos con la capacidad real en lugar del supuesto (12 visitas por día, 2 asesores por agencia) | Planes de la semana ejecutables y comparación justa con la prospección actual |
+| **Penetración de la Caja por distrito** | Clientes activos por distrito, en total y por segmento | Descontar del potencial a quienes ya son clientes (hoy se estima con la presencia de agencias) | Evita priorizar zonas ya cubiertas y mejora el cálculo de clientes **nuevos** |
+| **Productos para el segmento agro** | Condiciones del crédito agro y grupal vigente (montos, garantías requeridas, plazos) | Afinar el mensaje sugerido según la barrera de cada zona (falta de garantía, intereses altos) | Mensajes alineados con lo que la Caja realmente puede ofrecer |
+
+Con los dos primeros insumos podríamos además hacer una **validación retrospectiva**: verificar si las zonas que RadarCT habría priorizado hace un año son las que más clientes nuevos dieron después. Eso complementaría la simulación con datos sintéticos.

@@ -80,3 +80,16 @@ python fase2/rutas_agro.py --asesores 3 --semanas 12 --visitas-dia 12 --cobertur
 
 Salidas: `salidas/resumen_asesores.csv` (cobertura por agencia), `circuitos_asesores.csv`, `rutas_asesores.csv`
 (orden de visita), `zonas_agro.csv` (hexágonos) y `mapa_rutas_agro.html`.
+
+# Fase 3 — Validación por simulación (datos sintéticos)
+
+```bash
+python fase3/simulacion.py                 # 10 asesores × 40 días, 1 000 corridas
+```
+
+Compara, con la **misma capacidad** de asesores, la prospección convencional (barrido donde ya hay agencia) con la
+propuesta (zonas del índice con cupo agro). El mundo sintético se arma con los datos públicos por distrito, más un
+efecto oculto por distrito que el índice no ve; los supuestos (consentimiento, conversión, efecto de la competencia,
+etc.) varían en cada corrida. **Los resultados son simulados, no reales.** KPI principal acordado con el owner: nuevos
+clientes con su primer crédito en la Caja. Salidas: `salidas/simulacion_reporte.md`, `salidas/simulacion_corridas.csv`
+y `data/sintetico/prospectos_sinteticos.csv` (prospectos sintéticos, no personas reales).
